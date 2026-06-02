@@ -177,8 +177,9 @@
 
         <!-- Footer block in sidebar (Desktop only) -->
         <div class="hidden md:block pt-6 border-t border-purple-500/10 dark:border-white/10 space-y-3">
-          <div class="text-purple-700 dark:text-softcom-yellow font-black italic text-lg tracking-tighter animate-pulse">
-            Bora Trabalhar! 😉
+          <div class="space-y-1">
+            <span class="block text-[10px] font-black uppercase tracking-widest text-purple-700/60 dark:text-softcom-yellow/60 dynamic-day">Carregando dia...</span>
+            <span class="block text-purple-700 dark:text-softcom-yellow font-black italic text-[13px] leading-tight tracking-tight animate-pulse dynamic-phrase">Bora Trabalhar! 😉</span>
           </div>
           <p class="text-[10px] text-gray-400 dark:text-gray-500 font-semibold tracking-widest uppercase">
             &copy; 2026 Miller Santos
@@ -188,7 +189,7 @@
 
       <!-- Links Grid (Right / Main) -->
       <div class="glass-card rounded-[2.5rem] p-5 sm:p-6 lg:p-8 md:w-[68%] flex-grow flex flex-col justify-between space-y-6">
-        <div class="space-y-4">
+        <div class="space-y-6">
           <div class="flex justify-between items-center pb-3 border-b border-purple-500/10 dark:border-white/10">
             <span class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">Atalhos Úteis</span>
             <!-- Live date on Mobile -->
@@ -197,122 +198,154 @@
             </span>
           </div>
 
-          <!-- Links Nav: Grid Layout (1 col on mobile, 2 cols on tablet/desktop) -->
-          <nav class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            
-            <!-- SoftChat (Featured double-column) -->
-            <a href="https://app.myzchat.com/" 
-               class="btn-softcom sm:col-span-2 group justify-between w-full px-5 py-4 bg-yellow-400 hover:bg-yellow-300 dark:bg-softcom-yellow dark:hover:bg-yellow-300/90 rounded-2xl shimmer-effect border-none shadow-md hover:shadow-lg transition-all duration-300">
-              <div class="flex items-center gap-4 text-left">
-                <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-purple-950/10 text-purple-950 dark:bg-softcom-purple/15 dark:text-softcom-purple">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <!-- Setor Técnico -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] font-black uppercase tracking-widest text-purple-700 dark:text-softcom-yellow/90">Setor Técnico</span>
+              <div class="h-[1px] flex-grow bg-purple-500/10 dark:bg-white/10"></div>
+            </div>
+            <!-- Links Nav: Grid Layout (1 col on mobile, 2 cols on tablet/desktop) -->
+            <nav class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- SoftChat (Featured double-column) -->
+              <a href="https://app.myzchat.com/" 
+                 class="btn-softcom sm:col-span-2 group justify-between w-full px-5 py-4 bg-yellow-400 hover:bg-yellow-300 dark:bg-softcom-yellow dark:hover:bg-yellow-300/90 rounded-2xl shimmer-effect border-none shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center gap-4 text-left">
+                  <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-purple-950/10 text-purple-950 dark:bg-softcom-purple/15 dark:text-softcom-purple">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <div>
+                    <span class="block font-black uppercase tracking-widest text-xs sm:text-sm text-purple-950 dark:text-softcom-purple">SoftChat (Exclusivo)</span>
+                    <span class="block text-[10px] sm:text-xs font-semibold text-purple-900/60 dark:text-softcom-purple-dark/70">Comunicação e atendimento interno</span>
+                  </div>
                 </div>
-                <div>
-                  <span class="block font-black uppercase tracking-widest text-xs sm:text-sm text-purple-950 dark:text-softcom-purple">SoftChat (Exclusivo)</span>
-                  <span class="block text-[10px] sm:text-xs font-semibold text-purple-900/60 dark:text-softcom-purple-dark/70">Comunicação e atendimento interno</span>
-                </div>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-950 dark:text-softcom-purple group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-purple-950 dark:text-softcom-purple group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
 
-            <!-- Área Clientes -->
-            <a href="https://www.softcom.areaclientes.com.br/login" 
-               class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-amber-500/5 dark:hover:bg-softcom-yellow/5 hover:border-amber-500/30 dark:hover:border-softcom-yellow/30 transition-all duration-300">
-              <div class="flex items-center gap-4 text-left">
-                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-amber-500/10 text-amber-600 dark:bg-softcom-yellow/10 dark:text-softcom-yellow group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <!-- HelpTools -->
+              <a href="https://helptools.softcomsistemas.com.br" 
+                 class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-orange-500/5 dark:hover:bg-orange-500/5 hover:border-orange-500/30 transition-all duration-300">
+                <div class="flex items-center gap-4 text-left">
+                  <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 dark:text-orange-400 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">HelpTools</span>
+                    <span class="block text-[10px] btn-desc">Utilitários e diagnósticos técnicos</span>
+                  </div>
                 </div>
-                <div>
-                  <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Área Clientes</span>
-                  <span class="block text-[10px] btn-desc">Painel administrativo de clientes</span>
-                </div>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-amber-500 dark:group-hover:text-softcom-yellow group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-orange-500 dark:group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
 
-            <!-- Demo SoftcomShop -->
-            <a href="https://softcomshopdemo.base44.app" 
-               class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-blue-500/5 dark:hover:bg-blue-500/5 hover:border-blue-500/30 transition-all duration-300">
-              <div class="flex items-center gap-4 text-left">
-                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              <!-- Portal do Franqueado -->
+              <a href="https://portaldofranqueado.softcomsistemas.com.br" 
+                 class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-emerald-500/5 dark:hover:bg-emerald-500/5 hover:border-emerald-500/30 transition-all duration-300">
+                <div class="flex items-center gap-4 text-left">
+                  <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Portal do Franqueado</span>
+                    <span class="block text-[10px] btn-desc">Gestão e suporte de franquias</span>
+                  </div>
                 </div>
-                <div>
-                  <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Demo SoftcomShop</span>
-                  <span class="block text-[10px] btn-desc">Teste da plataforma e-commerce</span>
-                </div>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
 
-            <!-- HelpTools -->
-            <a href="https://helptools.softcomsistemas.com.br" 
-               class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-orange-500/5 dark:hover:bg-orange-500/5 hover:border-orange-500/30 transition-all duration-300">
-              <div class="flex items-center gap-4 text-left">
-                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-orange-500/10 text-orange-500 dark:text-orange-400 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <!-- Portal de Serviços -->
+              <a href="https://portal.softcomservices.com/" 
+                 class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-cyan-500/5 dark:hover:bg-cyan-500/5 hover:border-cyan-500/30 transition-all duration-300">
+                <div class="flex items-center gap-4 text-left">
+                  <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-500 dark:text-cyan-400 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v8"/><path d="m16 6-4 4-4-4"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01"/><path d="M10 18h.01"/></svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Portal de Serviços</span>
+                    <span class="block text-[10px] btn-desc">Gestão de chamados e suporte</span>
+                  </div>
                 </div>
-                <div>
-                  <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">HelpTools</span>
-                  <span class="block text-[10px] btn-desc">Utilitários e diagnósticos técnicos</span>
-                </div>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-orange-500 dark:group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
 
-            <!-- Portal do Franqueado -->
-            <a href="https://portaldofranqueado.softcomsistemas.com.br" 
-               class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-emerald-500/5 dark:hover:bg-emerald-500/5 hover:border-emerald-500/30 transition-all duration-300">
-              <div class="flex items-center gap-4 text-left">
-                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+              <!-- Parametrização -->
+              <a href="https://softcom-tecnologia.chat.blip.ai/?appKey=cGFyYW1ldHJpemFjYW8yOmI2ZWU3OGFhLTJjYzYtNDBmZi04NWNiLTYyMzk4NzA2ZGU3NQ==" 
+                 class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-violet-500/5 dark:hover:bg-violet-500/5 hover:border-violet-500/30 transition-all duration-300">
+                <div class="flex items-center gap-4 text-left">
+                  <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-violet-500/10 text-violet-500 dark:text-violet-400 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Parametrização</span>
+                    <span class="block text-[10px] btn-desc">Se a página atualizar, perde a conversa</span>
+                  </div>
                 </div>
-                <div>
-                  <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Portal do Franqueado</span>
-                  <span class="block text-[10px] btn-desc">Gestão e suporte de franquias</span>
-                </div>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-violet-500 dark:group-hover:text-violet-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </nav>
+          </div>
 
-            <!-- Portal de Serviços -->
-            <a href="https://portal.softcomservices.com/" 
-               class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-cyan-500/5 dark:hover:bg-cyan-500/5 hover:border-cyan-500/30 transition-all duration-300">
-              <div class="flex items-center gap-4 text-left">
-                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-500 dark:text-cyan-400 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v8"/><path d="m16 6-4 4-4-4"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h.01"/><path d="M10 18h.01"/></svg>
+          <!-- Setor Comercial -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] font-black uppercase tracking-widest text-purple-700 dark:text-softcom-yellow/90">Setor Comercial</span>
+              <div class="h-[1px] flex-grow bg-purple-500/10 dark:bg-white/10"></div>
+            </div>
+            <!-- Links Nav: Grid Layout (1 col on mobile, 2 cols on tablet/desktop) -->
+            <nav class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Área Clientes -->
+              <a href="https://www.softcom.areaclientes.com.br/login" 
+                 class="btn-softcom sm:col-span-2 group justify-between w-full px-5 py-4 rounded-2xl hover:bg-amber-500/5 dark:hover:bg-softcom-yellow/5 hover:border-amber-500/30 dark:hover:border-softcom-yellow/30 transition-all duration-300">
+                <div class="flex items-center gap-4 text-left">
+                  <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-amber-500/10 text-amber-600 dark:bg-softcom-yellow/10 dark:text-softcom-yellow group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Área Clientes</span>
+                    <span class="block text-[10px] btn-desc">Painel administrativo de clientes</span>
+                  </div>
                 </div>
-                <div>
-                  <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Portal de Serviços</span>
-                  <span class="block text-[10px] btn-desc">Gestão de chamados e suporte</span>
-                </div>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-amber-500 dark:group-hover:text-softcom-yellow group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
 
-            <!-- Adquirentes Softcom Smart -->
-            <a href="https://softflow.softcom.services/adquirentes" 
-               class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-rose-500/5 dark:hover:bg-rose-500/5 hover:border-rose-500/30 transition-all duration-300">
-              <div class="flex items-center gap-4 text-left">
-                <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-rose-500/10 text-rose-500 dark:text-rose-400 group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+              <!-- Demo SoftcomShop -->
+              <a href="https://softcomshopdemo.base44.app" 
+                 class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-blue-500/5 dark:hover:bg-blue-500/5 hover:border-blue-500/30 transition-all duration-300">
+                <div class="flex items-center gap-4 text-left">
+                  <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Demo SoftcomShop</span>
+                    <span class="block text-[10px] btn-desc">Teste da plataforma e-commerce</span>
+                  </div>
                 </div>
-                <div>
-                  <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Adquirentes Softcom Smart</span>
-                  <span class="block text-[10px] btn-desc">Parceiros e taxas de adquirência</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+
+              <!-- Adquirentes Softcom Smart -->
+              <a href="https://softflow.softcom.services/adquirentes" 
+                 class="btn-softcom group justify-between w-full px-5 py-4 rounded-2xl hover:bg-rose-500/5 dark:hover:bg-rose-500/5 hover:border-rose-500/30 transition-all duration-300">
+                <div class="flex items-center gap-4 text-left">
+                  <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-rose-500/10 text-rose-500 dark:text-rose-400 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-xs sm:text-sm uppercase tracking-wide">Adquirentes Softcom Smart</span>
+                    <span class="block text-[10px] btn-desc">Parceiros e taxas de adquirência</span>
+                  </div>
                 </div>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-rose-500 dark:group-hover:text-rose-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </a>
-          </nav>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-rose-500 dark:group-hover:text-rose-400 group-hover:translate-x-1 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </nav>
+          </div>
         </div>
 
         <!-- Footer block in main content (Mobile only) -->
         <div class="md:hidden pt-6 border-t border-purple-500/10 dark:border-white/10 text-center space-y-3">
-          <div class="text-purple-700 dark:text-softcom-yellow font-black italic text-xl tracking-tighter animate-pulse">
-            Bora Trabalhar! 😉
+          <div class="space-y-1">
+            <span class="block text-[10px] font-black uppercase tracking-widest text-purple-700/60 dark:text-softcom-yellow/60 dynamic-day">Carregando dia...</span>
+            <span class="block text-purple-700 dark:text-softcom-yellow font-black italic text-sm leading-tight tracking-tight animate-pulse dynamic-phrase">Bora Trabalhar! 😉</span>
           </div>
-          <p class="text-[10px] text-gray-450 dark:text-gray-500 font-semibold tracking-widest uppercase">
+          <p class="text-[10px] text-gray-400 dark:text-gray-500 font-semibold tracking-widest uppercase">
             &copy; 2026 Miller Santos
           </p>
         </div>
@@ -370,6 +403,30 @@
     }
     updateTime();
     setInterval(updateTime, 1000);
+
+    // Dynamic motivational phrases by day of the week
+    const motivationalPhrases = {
+      0: { day: 'Domingo', text: 'Descanse bem, planeje melhor. 🙏' },
+      1: { day: 'Segunda-feira', text: 'Comece com foco, termine com resultado. 🚀' },
+      2: { day: 'Terça-feira', text: 'Tempo bem usado, trabalho bem feito. ⏱️' },
+      3: { day: 'Quarta-feira', text: 'Metade da semana, foco dobrado. 🎯' },
+      4: { day: 'Quinta-feira', text: 'Produtividade é transformar esforço em avanço. ⚡' },
+      5: { day: 'Sexta-feira', text: 'Feche a semana com entrega e orgulho. 💪' },
+      6: { day: 'Sábado', text: 'Até no ritmo leve, o progresso continua. 🌟' }
+    };
+
+    function updateMotivationalPhrase() {
+      const dayIndex = new Date().getDay();
+      const current = motivationalPhrases[dayIndex];
+      
+      document.querySelectorAll('.dynamic-day').forEach(el => {
+        el.innerText = current.day;
+      });
+      document.querySelectorAll('.dynamic-phrase').forEach(el => {
+        el.innerText = current.text;
+      });
+    }
+    updateMotivationalPhrase();
 
     // Pacman Canvas Background Animation
     const canvas = document.getElementById('pacmanCanvas');
