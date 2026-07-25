@@ -19,26 +19,32 @@ O AcessaBR transforma verificações técnicas reproduzíveis em explicações h
 criar um ranking ou constranger equipes: é tornar problemas visíveis, facilitar correções e abrir
 espaço para validação por quem vive essas barreiras.
 
-## Primeira coleta
+## Coleta atual
 
-A versão `0.1.0` começa por seis portais de Alagoas:
+A versão `0.2.0` monitora dez portais públicos de Alagoas:
 
 - Prefeitura de Maceió;
 - Portal de Serviços de Maceió;
 - Alagoas Digital;
 - Portal Alagoas;
 - Portal da Transparência de Alagoas;
-- Secretaria de Saúde de Alagoas.
+- Secretaria de Saúde de Alagoas;
+- Detran Alagoas;
+- Secretaria de Educação de Alagoas;
+- Defensoria Pública de Alagoas;
+- Tribunal de Justiça de Alagoas.
 
-Na coleta inicial, o mecanismo registrou **396 ocorrências automatizadas** relacionadas a 13 tipos
-de regra. Esses números são indícios em páginas selecionadas, não uma declaração de conformidade
-do portal inteiro.
+Na coleta atual, o mecanismo registrou **498 ocorrências automatizadas**: 157 críticas e 341
+sérias. O aumento absoluto em relação à primeira rodada acompanha a ampliação de seis para dez
+portais e não deve ser interpretado como piora. Esses números são indícios em páginas selecionadas,
+não uma declaração de conformidade do portal inteiro.
 
 ## O que já funciona
 
 - painel público filtrável;
 - relatórios por portal em linguagem simples;
-- dados abertos em JSON;
+- dados abertos em JSON e CSV;
+- histórico público das rodadas e do escopo;
 - coletor reproduzível com axe-core e Playwright;
 - execução semanal pelo GitHub Actions;
 - registro de versão, data, mecanismo e limitações;
@@ -76,7 +82,8 @@ npx playwright install chromium
 npm run audit
 ```
 
-O arquivo `site/data/audits.json` será atualizado. Revise os resultados antes de publicar.
+Os arquivos `site/data/audits.json` e `site/data/audits.csv` serão atualizados. A rodada anterior
+será preservada em `site/data/history/`. Revise os resultados antes de publicar.
 
 ### Validar e preparar o site
 
@@ -103,7 +110,7 @@ Leia o [guia de contribuição](CONTRIBUTING.md) e procure tarefas marcadas como
 ```text
 .
 ├── site/                  # dashboard publicado no GitHub Pages
-│   ├── data/audits.json   # base aberta atual
+│   ├── data/              # JSON, CSV e rodadas anteriores
 │   ├── index.html
 │   ├── metodologia.html
 │   ├── app.js
@@ -129,6 +136,14 @@ A metodologia combina:
 
 Leia [docs/METHODOLOGY.md](docs/METHODOLOGY.md) para conhecer escopo, interpretação, limitações e
 processo de correção.
+
+Para comunicar o projeto sem reduzir pessoas a números, consulte as
+[histórias por trás dos dados](docs/IMPACT_STORIES.md). O
+[kit de lançamento](docs/LAUNCH_KIT.md) reúne posts e convites prontos para
+redes sociais, coletivos e equipes responsáveis por portais.
+
+O relatório da rodada está em
+[docs/COLLECTIONS/2026-07-24-v0.2.md](docs/COLLECTIONS/2026-07-24-v0.2.md).
 
 ## Governança e segurança
 

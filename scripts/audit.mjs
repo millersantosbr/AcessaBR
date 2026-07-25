@@ -1,6 +1,10 @@
 import { chromium } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
-import { writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+
+const DATA_PATH = "site/data/audits.json";
+const CSV_PATH = "site/data/audits.csv";
+const HISTORY_PATH = "site/data/history";
 
 const targets = [
   {
@@ -45,8 +49,115 @@ const targets = [
     location: "Alagoas",
     url: "https://www.saude.al.gov.br/",
   },
+  {
+    id: "detran-al",
+    name: "Detran Alagoas",
+    category: "Mobilidade e trânsito",
+    location: "Alagoas",
+    url: "https://mais.detran.al.gov.br/",
+  },
+  {
+    id: "educacao-al",
+    name: "Secretaria de Educação de Alagoas",
+    category: "Educação",
+    location: "Alagoas",
+    url: "https://escolaweb.educacao.al.gov.br/",
+  },
+  {
+    id: "defensoria-al",
+    name: "Defensoria Pública de Alagoas",
+    category: "Acesso à Justiça",
+    location: "Alagoas",
+    url: "https://defensoria.al.def.br/",
+  },
+  {
+    id: "tjal",
+    name: "Tribunal de Justiça de Alagoas",
+    category: "Justiça",
+    location: "Alagoas",
+    url: "https://tjal.jus.br/",
+  },
 ];
 
+function collectionSummary(data) {
+  return {
+    generatedAt: data.generatedAt,
+    methodologyVersion: data.methodologyVersion,
+    portals: data.portals.length,
+    audited: data.portals.filter((portal) => portal.status === "audited").length,
+    unavailable: data.portals.filter((portal) => portal.status === "unavailable").length,
+    occurrences: data.portals.reduce((total, portal) => total + (portal.totals?.nodes ?? 0), 0),
+    critical: data.portals.reduce(
+      (total, portal) => total + (portal.totals?.byImpact?.critical ?? 0),
+      0,
+    ),
+    serious: data.portals.reduce(
+      (total, portal) => total + (portal.totals?.byImpact?.serious ?? 0),
+      0,
+    ),
+  };
+}
+
+function csvCell(value) {
+  const text = String(value ?? "");
+  return `"${text.replaceAll('"', '""')}"`;
+}
+
+function createCsv(data) {
+  const columns = [
+    "collection_date",
+    "methodology_version",
+    "portal_id",
+    "portal_name",
+    "category",
+    "location",
+    "portal_url",
+    "status",
+    "http_status",
+    "final_url",
+    "rule_id",
+    "impact",
+    "occurrences",
+    "rule_title",
+    "help_url",
+  ];
+  const rows = [columns];
+
+  for (const portal of data.portals) {
+    const findings = portal.findings?.length ? portal.findings : [null];
+    for (const finding of findings) {
+      rows.push([
+        data.generatedAt,
+        data.methodologyVersion,
+        portal.id,
+        portal.name,
+        portal.category,
+        portal.location,
+        portal.url,
+        portal.status,
+        portal.httpStatus,
+        portal.finalUrl,
+        finding?.id,
+        finding?.impact,
+        finding?.nodes ?? 0,
+        finding?.title,
+        finding?.helpUrl,
+      ]);
+    }
+  }
+
+  return `\uFEFF${rows.map((row) => row.map(csvCell).join(",")).join("\n")}\n`;
+}
+
+async function readPreviousData() {
+  try {
+    return JSON.parse(await readFile(DATA_PATH, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+const previousData = await readPreviousData();
 const browser = await chromium.launch({
   ...(process.env.CI ? {} : { channel: "chrome" }),
   headless: true,
@@ -58,7 +169,7 @@ for (const target of targets) {
     locale: "pt-BR",
     reducedMotion: "reduce",
     userAgent:
-      "AcessaBR/0.1 accessibility-research (+https://github.com/millersantosbr/AcessaBR)",
+      "AcessaBR/0.2 accessibility-research (+https://github.com/millersantosbr/AcessaBR)",
   });
   const page = await context.newPage();
   const startedAt = Date.now();
@@ -130,17 +241,39 @@ for (const target of targets) {
 }
 
 await browser.close();
-await writeFile(
-  "site/data/audits.json",
-  JSON.stringify(
-    {
-      generatedAt: new Date().toISOString(),
-      methodologyVersion: "0.1.0",
-      disclaimer:
-        "Resultados automatizados indicam barreiras potenciais e não constituem certificação ou declaração de conformidade.",
-      portals: collected,
-    },
-    null,
-    2,
-  ),
+
+const previousHistory = Array.isArray(previousData?.history) ? previousData.history : [];
+const history = [...previousHistory];
+if (
+  previousData?.generatedAt &&
+  !history.some((entry) => entry.generatedAt === previousData.generatedAt)
+) {
+  history.push(collectionSummary(previousData));
+}
+
+const dataset = {
+  generatedAt: new Date().toISOString(),
+  methodologyVersion: "0.2.0",
+  schemaVersion: "1.1.0",
+  disclaimer:
+    "Resultados automatizados indicam barreiras potenciais e não constituem certificação ou declaração de conformidade.",
+  history: history.slice(-24),
+  portals: collected,
+};
+
+if (previousData?.generatedAt) {
+  await mkdir(HISTORY_PATH, { recursive: true });
+  const snapshotName = previousData.generatedAt.replaceAll(":", "-");
+  await writeFile(
+    `${HISTORY_PATH}/${snapshotName}.json`,
+    `${JSON.stringify(previousData, null, 2)}\n`,
+  );
+}
+
+await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
+await writeFile(CSV_PATH, createCsv(dataset));
+
+const summary = collectionSummary(dataset);
+console.log(
+  `Coleta concluída: ${summary.audited}/${summary.portals} portais analisados e ${summary.occurrences} ocorrências registradas.`,
 );

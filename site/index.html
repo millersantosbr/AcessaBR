@@ -74,24 +74,24 @@
           </div>
         </div>
 
-        <aside class="signal-card" aria-label="Resumo da primeira coleta">
+        <aside class="signal-card" aria-label="Resumo da coleta atual">
           <div class="signal-top">
-            <span>COLETA / 001</span>
+            <span>COLETA / 002</span>
             <span class="live-signal"><i aria-hidden="true"></i> PUBLICADA</span>
           </div>
           <p class="signal-location">ALAGOAS · BRASIL</p>
           <dl class="signal-grid">
             <div>
               <dt>Portais monitorados</dt>
-              <dd data-stat="portals">6</dd>
+              <dd data-stat="portals">10</dd>
             </div>
             <div>
               <dt>Ocorrências observadas</dt>
-              <dd data-stat="nodes">396</dd>
+              <dd data-stat="nodes">498</dd>
             </div>
             <div>
               <dt>Impacto crítico</dt>
-              <dd data-stat="critical">152</dd>
+              <dd data-stat="critical">157</dd>
             </div>
             <div>
               <dt>Última coleta</dt>
@@ -117,8 +117,9 @@
           <div>
             <h2 id="radar-title">Barreiras visíveis.<br /><em>Correções possíveis.</em></h2>
             <p>
-              Esta primeira coleta observa páginas iniciais de seis serviços digitais de Alagoas.
-              Os achados ajudam a priorizar revisões; eles não certificam nem condenam um portal.
+              A coleta atual observa páginas de dez serviços públicos de Alagoas nas áreas de
+              governo, saúde, educação, mobilidade e Justiça. Os achados ajudam a priorizar
+              revisões; eles não certificam nem condenam um portal.
             </p>
           </div>
         </div>
@@ -126,17 +127,17 @@
         <div class="radar-summary" aria-live="polite">
           <article>
             <span>PORTAIS / TOTAL</span>
-            <strong data-stat="portals">6</strong>
+            <strong data-stat="portals">10</strong>
             <p>páginas monitoradas</p>
           </article>
           <article class="critical-summary">
             <span>IMPACTO / CRÍTICO</span>
-            <strong data-stat="critical">152</strong>
+            <strong data-stat="critical">157</strong>
             <p>elementos para priorizar</p>
           </article>
           <article>
             <span>IMPACTO / SÉRIO</span>
-            <strong data-stat="serious">244</strong>
+            <strong data-stat="serious">341</strong>
             <p>elementos para revisar</p>
           </article>
           <article class="positive-summary">
@@ -184,10 +185,98 @@
               no GitHub.
             </p>
           </div>
-          <a class="text-link" href="./data/audits.json" download>
-            Baixar dados JSON <span aria-hidden="true">↓</span>
-          </a>
+          <div class="data-links">
+            <a class="text-link" href="./data/audits.json" download>
+              Baixar JSON <span aria-hidden="true">↓</span>
+            </a>
+            <a class="text-link" href="./data/audits.csv" download>
+              Baixar CSV <span aria-hidden="true">↓</span>
+            </a>
+          </div>
         </div>
+
+        <section class="history-panel" aria-labelledby="history-title">
+          <div class="history-heading">
+            <div>
+              <span class="note-label">EVOLUÇÃO / ESCOPO</span>
+              <h3 id="history-title">Histórico sem ranking</h3>
+            </div>
+            <p id="history-summary">
+              A rodada atual acrescentou quatro portais. Totais de coletas com escopos diferentes
+              não indicam melhora ou piora.
+            </p>
+          </div>
+          <div class="history-list" id="history-list" aria-live="polite">
+            <article class="history-item is-current">
+              <div><span>ATUAL</span><time datetime="2026-07-25">24 DE JULHO DE 2026</time></div>
+              <dl>
+                <div><dt>Portais</dt><dd>10</dd></div>
+                <div><dt>Ocorrências</dt><dd>498</dd></div>
+                <div><dt>Críticas</dt><dd>157</dd></div>
+              </dl>
+              <p>Metodologia 0.2.0</p>
+            </article>
+            <article class="history-item">
+              <div><span>ANTERIOR / 01</span><time datetime="2026-07-25">24 DE JULHO DE 2026</time></div>
+              <dl>
+                <div><dt>Portais</dt><dd>6</dd></div>
+                <div><dt>Ocorrências</dt><dd>396</dd></div>
+                <div><dt>Críticas</dt><dd>152</dd></div>
+              </dl>
+              <p>Metodologia 0.1.0</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="stories" aria-labelledby="stories-title">
+          <div class="stories-heading">
+            <span class="note-label">DO DADO À EXPERIÊNCIA</span>
+            <h3 id="stories-title">O que esses padrões podem significar</h3>
+            <p>
+              Números ganham sentido quando ajudam a formular perguntas humanas. Estes recortes
+              mostram caminhos de revisão, não culpados.
+            </p>
+          </div>
+          <div class="story-grid">
+            <article data-story-rule="color-contrast">
+              <span>LEITURA / VISÃO</span>
+              <h4>Quando o texto está lá, mas pode não ser legível</h4>
+              <p>
+                <strong data-story-count>149</strong> elementos em
+                <strong data-story-portals>9</strong> portais apresentaram contraste insuficiente.
+                Isso pode afetar pessoas com baixa visão, daltonismo ou que usam a tela sob muita
+                luz.
+              </p>
+            </article>
+            <article data-story-rule="image-alt">
+              <span>CONTEÚDO / LEITOR DE TELA</span>
+              <h4>Quando uma imagem não chega a todos</h4>
+              <p>
+                <strong data-story-count>147</strong> imagens em
+                <strong data-story-portals>3</strong> portais não tinham alternativa textual
+                detectável. A correção depende de saber se cada imagem informa, age ou apenas
+                decora.
+              </p>
+            </article>
+            <article data-story-rule="link-name">
+              <span>NAVEGAÇÃO / CONTEXTO</span>
+              <h4>Quando existe um link, mas falta destino</h4>
+              <p>
+                <strong data-story-count>95</strong> links em
+                <strong data-story-portals>7</strong> portais não tinham nome compreensível. Quem
+                usa leitor de tela pode encontrar o controle sem descobrir aonde ele leva.
+              </p>
+            </article>
+          </div>
+          <a
+            class="text-link stories-link"
+            href="https://github.com/millersantosbr/AcessaBR/blob/main/docs/IMPACT_STORIES.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ler histórias e caminhos de correção ↗
+          </a>
+        </section>
       </section>
 
       <section class="method section-pad" id="metodologia" aria-labelledby="method-title">
@@ -267,7 +356,7 @@
           </a>
           <a href="./metodologia.html">
             <span>ACESSABR</span>
-            <strong>Metodologia 0.1</strong>
+            <strong>Metodologia 0.2</strong>
             <i aria-hidden="true">→</i>
           </a>
         </div>
@@ -331,15 +420,15 @@
         <div class="roadmap">
           <p class="roadmap-label">ROADMAP PÚBLICO / 2026</p>
           <ol>
-            <li class="is-current">
-              <span>AGORA</span>
-              <strong>v0.1 · Alagoas</strong>
+            <li>
+              <span>CONCLUÍDO</span>
+              <strong>v0.1 · Fundação</strong>
               <p>Coleta reproduzível, painel aberto e documentação inicial.</p>
             </li>
-            <li>
-              <span>PRÓXIMO</span>
+            <li class="is-current">
+              <span>AGORA</span>
               <strong>v0.2 · Comunidade</strong>
-              <p>Validação manual, histórico e perfis de contribuição.</p>
+              <p>Dez portais, histórico público, CSV e caminhos para validação humana.</p>
             </li>
             <li>
               <span>OBJETIVO</span>

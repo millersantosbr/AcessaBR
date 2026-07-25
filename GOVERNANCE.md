@@ -36,6 +36,6 @@ revisora de uma decisão que afete diretamente sua organização.
 
 ## Estado inicial
 
-Na versão 0.1, Miller Santos atua como mantenedor fundador. A expansão da
+Na versão 0.2, Miller Santos atua como mantenedor fundador. A expansão da
 manutenção será baseada em participação consistente, cuidado comunitário e
 alinhamento com a missão.

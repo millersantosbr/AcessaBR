@@ -11,13 +11,16 @@ fonte de verdade para o trabalho em andamento.
 - [x] metodologia e limitações públicas;
 - [x] automação semanal;
 - [x] formulários de contribuição;
-- [ ] publicar as primeiras tarefas `good first issue`;
+- [x] publicar as primeiras tarefas `good first issue`;
 - [ ] convidar revisores com experiência vivida em acessibilidade.
 
 ## v0.2 — Comunidade
 
 - [ ] registrar validações manuais separadas da automação;
-- [ ] histórico visual por portal;
+- [x] histórico visual das rodadas;
+- [x] ampliar o recorte para dez portais;
+- [x] exportação CSV;
+- [x] esquema JSON versionado;
 - [ ] páginas de território;
 - [ ] tradução inicial para inglês e espanhol;
 - [ ] guia para grupos locais criarem uma coleta;
@@ -28,8 +31,6 @@ fonte de verdade para o trabalho em andamento.
 
 - [ ] CLI documentada;
 - [ ] GitHub Action reutilizável por outros projetos;
-- [ ] exportação CSV;
-- [ ] esquema JSON versionado;
 - [ ] API somente leitura;
 - [ ] catálogo aberto de explicações.
 

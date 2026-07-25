@@ -5,6 +5,7 @@ const files = {
   methodology: await readFile("site/metodologia.html", "utf8"),
   css: await readFile("site/styles.css", "utf8"),
   script: await readFile("site/app.js", "utf8"),
+  csv: await readFile("site/data/audits.csv", "utf8"),
   data: JSON.parse(await readFile("site/data/audits.json", "utf8")),
 };
 
@@ -45,6 +46,18 @@ requireText(files.script, /escapeHtml/, "Conteúdo dinâmico sem escape explíci
 
 if (!Array.isArray(files.data.portals) || files.data.portals.length < 1) {
   failures.push("Base de auditorias não contém portais");
+}
+
+if (!files.data.schemaVersion) {
+  failures.push("Base de auditorias sem versão de esquema");
+}
+
+if (!Array.isArray(files.data.history)) {
+  failures.push("Base de auditorias sem histórico de coletas");
+}
+
+if (!files.csv.includes('"collection_date","methodology_version","portal_id"')) {
+  failures.push("Exportação CSV sem cabeçalho esperado");
 }
 
 for (const portal of files.data.portals ?? []) {

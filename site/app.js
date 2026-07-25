@@ -46,6 +46,21 @@ const ruleContent = {
     why: "Uma marcação ARIA inválida pode gerar anúncios incorretos ou inconsistentes em leitores de tela.",
     review: "Remover o atributo incompatível ou ajustar o papel semântico do elemento.",
   },
+  "aria-command-name": {
+    title: "Comando sem nome compreensível",
+    why: "Um controle criado com ARIA pode ser anunciado apenas como botão, link ou item de menu, sem explicar sua ação.",
+    review: "Fornecer texto visível ou um nome acessível equivalente à função do comando.",
+  },
+  "aria-hidden-focus": {
+    title: "Controle focável escondido de leitores de tela",
+    why: "A pessoa pode alcançar um controle pelo teclado, mas o leitor de tela pode não anunciá-lo porque ele está dentro de uma área marcada como oculta.",
+    review: "Remover o controle da ordem de foco enquanto estiver oculto ou corrigir o uso de aria-hidden.",
+  },
+  "aria-prohibited-attr": {
+    title: "Atributo ARIA proibido para o elemento",
+    why: "Um atributo incompatível com a função do elemento pode produzir informações incorretas em tecnologias assistivas.",
+    review: "Remover o atributo proibido ou usar um elemento e papel semântico compatíveis.",
+  },
   "aria-required-children": {
     title: "Componente ARIA incompleto",
     why: "A estrutura esperada do componente está incompleta, o que pode impedir sua compreensão ou operação.",
@@ -100,6 +115,9 @@ const dialogContent = document.querySelector("#dialog-content");
 const dialogClose = document.querySelector("#dialog-close");
 const shareButton = document.querySelector("#share-project");
 const toast = document.querySelector("#toast");
+const historyList = document.querySelector("#history-list");
+const historySummary = document.querySelector("#history-summary");
+const storyCards = [...document.querySelectorAll("[data-story-rule]")];
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -152,6 +170,75 @@ function updateStats(data) {
   document.querySelectorAll('[data-stat="date"]').forEach((element) => {
     element.textContent = formatDate(data.generatedAt, true);
   });
+}
+
+function renderHistory(data) {
+  if (!historyList || !historySummary) return;
+
+  const currentTotals = summarize(data);
+  const currentCollection = {
+    generatedAt: data.generatedAt,
+    methodologyVersion: data.methodologyVersion,
+    portals: currentTotals.portals,
+    audited: data.portals.filter((portal) => portal.status === "audited").length,
+    unavailable: data.portals.filter((portal) => portal.status === "unavailable").length,
+    occurrences: currentTotals.nodes,
+    critical: currentTotals.critical,
+    serious: currentTotals.serious,
+    current: true,
+  };
+  const history = Array.isArray(data.history) ? data.history : [];
+  const collections = [...history, currentCollection].slice(-4).reverse();
+  const previous = history.at(-1);
+  const addedPortals = previous ? currentCollection.portals - previous.portals : 0;
+
+  historySummary.textContent =
+    addedPortals > 0
+      ? `A rodada atual acrescentou ${formatNumber(addedPortals)} portais. Totais de coletas com escopos diferentes não indicam melhora ou piora.`
+      : "Cada rodada permanece registrada para permitir comparação responsável do mesmo escopo.";
+
+  historyList.innerHTML = collections
+    .map(
+      (collection, index) => `
+        <article class="history-item${collection.current ? " is-current" : ""}">
+          <div>
+            <span>${collection.current ? "ATUAL" : `ANTERIOR / ${String(index).padStart(2, "0")}`}</span>
+            <time datetime="${escapeHtml(collection.generatedAt)}">${escapeHtml(
+              formatDate(collection.generatedAt),
+            )}</time>
+          </div>
+          <dl>
+            <div><dt>Portais</dt><dd>${formatNumber(collection.portals)}</dd></div>
+            <div><dt>Ocorrências</dt><dd>${formatNumber(collection.occurrences)}</dd></div>
+            <div><dt>Críticas</dt><dd>${formatNumber(collection.critical)}</dd></div>
+          </dl>
+          <p>Metodologia ${escapeHtml(collection.methodologyVersion ?? "não informada")}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderStories(data) {
+  const totalsByRule = new Map();
+
+  for (const portal of data.portals) {
+    for (const finding of portal.findings ?? []) {
+      const total = totalsByRule.get(finding.id) ?? { occurrences: 0, portals: 0 };
+      total.occurrences += finding.nodes ?? 0;
+      total.portals += 1;
+      totalsByRule.set(finding.id, total);
+    }
+  }
+
+  for (const card of storyCards) {
+    const totals = totalsByRule.get(card.dataset.storyRule) ?? {
+      occurrences: 0,
+      portals: 0,
+    };
+    card.querySelector("[data-story-count]").textContent = formatNumber(totals.occurrences);
+    card.querySelector("[data-story-portals]").textContent = formatNumber(totals.portals);
+  }
 }
 
 function impactBar(portal) {
@@ -438,6 +525,8 @@ async function init() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
     updateStats(state.data);
+    renderHistory(state.data);
+    renderStories(state.data);
     renderPortals();
     loadingState.hidden = true;
   } catch {

@@ -1,6 +1,6 @@
 # Metodologia do AcessaBR
 
-Versão: `0.1.0`
+Versão: `0.2.0`
 
 ## 1. Objetivo
 
@@ -33,6 +33,8 @@ O script `scripts/audit.mjs`:
 4. registra regra, impacto, quantidade de elementos e até três seletores;
 5. grava mecanismo, versão, URL final, título, data e duração;
 6. registra falhas de acesso sem inferir acessibilidade.
+7. exporta uma visão tabular em CSV;
+8. preserva a rodada anterior e um resumo histórico do escopo.
 
 O user agent identifica o AcessaBR. O coletor não contorna autenticação,
 CAPTCHA, paywall ou proteção de acesso.
@@ -82,9 +84,15 @@ Validações automáticas e manuais permanecem separadas na base.
 
 Uma instituição ou contribuidor pode abrir uma issue com evidências. A equipe
 revisa a regra, o escopo e a versão. Quando apropriado, executa-se uma nova
-coleta. O histórico anterior permanece no GitHub.
+coleta. O histórico anterior permanece no GitHub e no diretório
+`site/data/history/`.
 
 ## 10. Versionamento
 
 Mudanças que alteram significado, escopo, interpretação ou estrutura dos dados
 incrementam a versão da metodologia. A base inclui a versão utilizada.
+
+O campo `schemaVersion` identifica a estrutura da base. A versão `1.1.0`
+adiciona o resumo `history`, sem alterar o significado dos resultados por
+portal. A exportação CSV apresenta uma linha por regra e portal para facilitar
+análises em planilhas.
