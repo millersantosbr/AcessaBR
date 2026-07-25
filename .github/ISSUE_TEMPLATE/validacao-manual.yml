@@ -1,0 +1,59 @@
+name: Validação manual
+description: Registre uma barreira ou uma experiência bem-sucedida.
+title: "[Validação] "
+labels: ["manual-validation", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Experiências vividas são essenciais. Use dados fictícios ao descrever formulários e não publique informações pessoais.
+  - type: input
+    id: url
+    attributes:
+      label: Página observada
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: task
+    attributes:
+      label: Tarefa realizada
+      placeholder: Ex. localizar um serviço de saúde
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Informe dispositivo, navegador, método de entrada e tecnologia assistiva, quando aplicável.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que você esperava?
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: O que aconteceu?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Acesse...
+        2. Navegue...
+        3. Observe...
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacidade
+      options:
+        - label: Removi dados pessoais, credenciais e outras informações sensíveis.
+          required: true

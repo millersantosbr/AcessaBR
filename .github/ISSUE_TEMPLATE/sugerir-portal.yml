@@ -1,0 +1,58 @@
+name: Sugerir um portal
+description: Indique um serviço público ou essencial para entrar no radar.
+title: "[Portal] "
+labels: ["portal", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por ampliar o território do AcessaBR. Informe apenas páginas públicas e não compartilhe dados pessoais.
+  - type: input
+    id: name
+    attributes:
+      label: Nome do serviço
+      placeholder: Ex. Portal de Serviços da cidade
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL pública
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: territory
+    attributes:
+      label: Cidade e estado
+      placeholder: Maceió, AL
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      options:
+        - Saúde
+        - Educação
+        - Mobilidade
+        - Assistência social
+        - Documentos e tributos
+        - Transparência
+        - Outro serviço essencial
+    validations:
+      required: true
+  - type: textarea
+    id: importance
+    attributes:
+      label: Por que esse serviço importa?
+      description: Explique qual tarefa as pessoas precisam realizar.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Segurança
+      options:
+        - label: A página é pública e não exige o compartilhamento de credenciais ou dados pessoais para ser observada.
+          required: true

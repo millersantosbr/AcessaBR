@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Metodologia pública do AcessaBR para observação e validação de barreiras de acessibilidade digital."
+    />
+    <meta name="theme-color" content="#f2eee6" />
+    <title>Metodologia — AcessaBR</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="AcessaBR — início">
+        <span aria-hidden="true">acessa</span><strong>BR</strong><i aria-hidden="true">/</i>
+      </a>
+      <a class="header-action" href="./index.html">Voltar ao radar <span aria-hidden="true">←</span></a>
+    </header>
+
+    <main id="conteudo" class="methodology-page">
+      <header class="methodology-hero">
+        <p class="eyebrow">MÉTODO ABERTO / VERSÃO 0.1.0</p>
+        <h1>Observar com rigor.<br /><em>Comunicar com cuidado.</em></h1>
+        <p>
+          O AcessaBR registra barreiras potenciais em páginas selecionadas. Não concede selos,
+          não declara conformidade integral e não substitui auditoria conduzida por especialistas
+          e pessoas com deficiência.
+        </p>
+      </header>
+
+      <div class="methodology-layout">
+        <aside>
+          <nav aria-label="Nesta página">
+            <p>NESTA PÁGINA</p>
+            <a href="#principios">Princípios</a>
+            <a href="#escopo">Escopo</a>
+            <a href="#coleta">Coleta automatizada</a>
+            <a href="#interpretacao">Interpretação</a>
+            <a href="#validacao">Validação humana</a>
+            <a href="#limitacoes">Limitações</a>
+            <a href="#correcao">Correções</a>
+          </nav>
+        </aside>
+
+        <article class="methodology-content">
+          <section id="principios">
+            <span>01</span>
+            <h2>Princípios</h2>
+            <ul>
+              <li>Pessoas com deficiência devem participar das decisões do projeto.</li>
+              <li>Resultados automatizados são indícios, não provas de conformidade.</li>
+              <li>O objetivo é facilitar correções, não produzir constrangimento público.</li>
+              <li>Dados, regras, versões e limitações precisam ser transparentes.</li>
+              <li>Uma ausência de achados automáticos nunca equivale a “site acessível”.</li>
+            </ul>
+          </section>
+
+          <section id="escopo">
+            <span>02</span>
+            <h2>Definição do escopo</h2>
+            <p>
+              Cada registro identifica a URL, a categoria do serviço, a data, o mecanismo de
+              coleta e a versão da metodologia. A versão 0.1 observa uma única página pública por
+              portal. Jornadas autenticadas, documentos, aplicativos e processos completos ficam
+              fora do escopo inicial.
+            </p>
+          </section>
+
+          <section id="coleta">
+            <span>03</span>
+            <h2>Coleta automatizada</h2>
+            <p>
+              A automação abre a página em navegador Chromium e executa o axe-core com regras
+              relacionadas aos níveis A e AA das WCAG 2.0, 2.1 e 2.2. São registrados a regra, o
+              impacto informado pelo mecanismo, a quantidade de elementos e exemplos limitados de
+              seletores.
+            </p>
+            <pre><code>npm ci
+npx playwright install chromium
+npm run audit</code></pre>
+            <p>
+              O coletor não tenta contornar autenticação, CAPTCHA, bloqueios ou proteções do site.
+              Uma página inacessível ao robô é registrada como indisponível, sem inferências.
+            </p>
+          </section>
+
+          <section id="interpretacao">
+            <span>04</span>
+            <h2>Interpretação</h2>
+            <p>
+              “Crítico”, “sério”, “moderado” e “menor” são níveis de impacto fornecidos pelo
+              axe-core. O painel não transforma esses valores em ranking, porcentagem de
+              acessibilidade ou certificação. O texto público explica a possível consequência para
+              pessoas, e não apenas o nome técnico da regra.
+            </p>
+          </section>
+
+          <section id="validacao">
+            <span>05</span>
+            <h2>Validação humana</h2>
+            <p>
+              Relatos manuais devem indicar página, tarefa, ambiente, tecnologia assistiva quando
+              aplicável, comportamento esperado e comportamento observado. Nunca solicitamos dados
+              pessoais, credenciais ou informações sensíveis para reproduzir uma barreira.
+            </p>
+          </section>
+
+          <section id="limitacoes">
+            <span>06</span>
+            <h2>Limitações conhecidas</h2>
+            <ul>
+              <li>Amostras de uma página não representam todo o produto digital.</li>
+              <li>Conteúdo dinâmico pode surgir depois da coleta.</li>
+              <li>Algumas regras exigem avaliação subjetiva ou teste com tecnologia assistiva.</li>
+              <li>Mudanças no portal podem tornar um resultado rapidamente desatualizado.</li>
+              <li>Quantidade de elementos não mede, sozinha, o impacto vivido por uma pessoa.</li>
+            </ul>
+          </section>
+
+          <section id="correcao">
+            <span>07</span>
+            <h2>Correção e contestação</h2>
+            <p>
+              Mantenedores podem abrir uma issue indicando correção, mudança de escopo ou possível
+              falso positivo. A comunidade revisa a evidência e uma nova coleta registra a
+              evolução. Resultados anteriores permanecem no histórico do GitHub.
+            </p>
+            <a
+              class="button button-primary"
+              href="https://github.com/millersantosbr/Softcom/issues/new?template=correcao.yml"
+            >
+              Informar uma correção ↗
+            </a>
+          </section>
+
+          <section class="reference-box">
+            <h2>Referências</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2 — W3C</a></li>
+              <li><a href="https://www.w3.org/TR/wcag-em-2/">WCAG-EM 2.0 — W3C</a></li>
+              <li>
+                <a
+                  href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/modelo-de-acessibilidade"
+                >
+                  Modelo de Acessibilidade em Governo Eletrônico — eMAG
+                </a>
+              </li>
+              <li><a href="https://github.com/dequelabs/axe-core">axe-core</a></li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <a class="brand brand-footer" href="./index.html" aria-label="AcessaBR — início">
+        <span aria-hidden="true">acessa</span><strong>BR</strong><i aria-hidden="true">/</i>
+      </a>
+      <p>Metodologia aberta a revisão e contribuição pública.</p>
+      <div><a href="./index.html">Voltar ao radar</a></div>
+    </footer>
+  </body>
+</html>

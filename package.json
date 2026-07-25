@@ -1,0 +1,24 @@
+{
+  "name": "acessabr",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Radar aberto e comunitário de barreiras de acessibilidade digital.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite site --host 127.0.0.1",
+    "build": "node scripts/build.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "audit": "node scripts/audit.mjs",
+    "test:a11y": "node scripts/check-accessibility.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "npm run validate && npm run build"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "playwright": "1.55.1",
+    "vite": "8.0.13"
+  }
+}

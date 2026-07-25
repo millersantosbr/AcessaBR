@@ -1,0 +1,18 @@
+# Dependências e builds
+node_modules/
+dist/
+
+# Arquivos locais de trabalho
+work/
+outputs/
+.wrangler/
+
+# Ambiente e credenciais
+.env
+.env.*
+*.pem
+
+# Sistema e logs
+.DS_Store
+Thumbs.db
+npm-debug.log*

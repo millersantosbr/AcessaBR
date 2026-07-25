@@ -1,0 +1,51 @@
+name: Atualizar radar
+
+on:
+  schedule:
+    - cron: "17 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: accessibility-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Instalar navegador
+        run: npx playwright install --with-deps chromium
+
+      - name: Executar coleta
+        run: npm run audit
+
+      - name: Validar base
+        run: npm run validate
+
+      - name: Registrar nova coleta
+        run: |
+          if git diff --quiet -- site/data/audits.json; then
+            echo "Nenhuma mudança na base."
+            exit 0
+          fi
+          git config user.name "acessabr-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/audits.json
+          git commit -m "data: atualiza coleta automatizada"
+          git push

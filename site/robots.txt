@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://millersantosbr.github.io/Softcom/sitemap.xml

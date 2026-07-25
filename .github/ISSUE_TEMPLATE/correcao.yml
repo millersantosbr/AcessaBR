@@ -1,0 +1,32 @@
+name: Informar uma correção
+description: Avise sobre uma correção, mudança de URL ou possível falso positivo.
+title: "[Correção] "
+labels: ["correction", "needs-review"]
+body:
+  - type: input
+    id: portal
+    attributes:
+      label: Portal ou serviço
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: O que mudou?
+      description: Informe a regra, correção ou razão para revisar o resultado.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Como podemos verificar?
+      description: Inclua passos públicos e reproduzíveis, sem dados sensíveis.
+    validations:
+      required: true
