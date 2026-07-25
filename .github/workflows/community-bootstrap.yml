@@ -1,0 +1,174 @@
+name: Preparar comunidade
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/community-bootstrap.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Criar etiquetas e primeiras contribuições
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const labels = [
+              {
+                name: "good first issue",
+                color: "2DA44E",
+                description: "Uma boa primeira contribuição para conhecer o projeto."
+              },
+              {
+                name: "help wanted",
+                color: "0E8A16",
+                description: "A comunidade pode ajudar a levar esta tarefa adiante."
+              },
+              {
+                name: "acessibilidade",
+                color: "B60205",
+                description: "Experiência, testes ou conteúdo de acessibilidade."
+              },
+              {
+                name: "documentação",
+                color: "1D76DB",
+                description: "Melhorias de texto, exemplos e documentação."
+              },
+              {
+                name: "dados",
+                color: "D4C5F9",
+                description: "Coleta, revisão ou publicação de dados abertos."
+              }
+            ];
+
+            const currentLabels = await github.paginate(
+              github.rest.issues.listLabelsForRepo,
+              { owner, repo, per_page: 100 }
+            );
+            const existingLabelNames = new Set(
+              currentLabels.map((label) => label.name.toLowerCase())
+            );
+
+            for (const label of labels) {
+              if (!existingLabelNames.has(label.name.toLowerCase())) {
+                await github.rest.issues.createLabel({ owner, repo, ...label });
+              }
+            }
+
+            const tasks = [
+              {
+                title: "docs: revisar explicações das regras em linguagem simples",
+                labels: ["good first issue", "help wanted", "documentação", "acessibilidade"],
+                body: [
+                  "## Contexto",
+                  "",
+                  "O AcessaBR traduz resultados técnicos para pessoas que não trabalham com desenvolvimento. Queremos revisar as explicações exibidas nos relatórios para deixá-las mais claras, respeitosas e acionáveis.",
+                  "",
+                  "## Como contribuir",
+                  "",
+                  "- abra `site/app.js` e localize o objeto `RULE_GUIDE`;",
+                  "- escolha uma regra e proponha uma explicação mais simples;",
+                  "- preserve o sentido técnico e evite afirmar que o teste automático comprova conformidade;",
+                  "- inclua uma fonte confiável quando adicionar informação nova.",
+                  "",
+                  "Uma única regra revisada já é uma contribuição válida."
+                ].join("\n")
+              },
+              {
+                title: "feat: oferecer download dos dados em CSV",
+                labels: ["good first issue", "help wanted", "dados"],
+                body: [
+                  "## Contexto",
+                  "",
+                  "A base já pode ser baixada em JSON. Uma exportação CSV facilitaria o uso por jornalistas, pesquisadores e pessoas que preferem planilhas.",
+                  "",
+                  "## Resultado esperado",
+                  "",
+                  "- gerar o CSV no processo de build, a partir de `site/data/audits.json`;",
+                  "- incluir cabeçalhos compreensíveis em português;",
+                  "- adicionar um link de download ao lado do JSON;",
+                  "- documentar a estrutura do arquivo no README.",
+                  "",
+                  "Não é necessário adicionar uma nova dependência se a conversão puder ser feita com JavaScript."
+                ].join("\n")
+              },
+              {
+                title: "docs: criar uma versão do README em inglês",
+                labels: ["good first issue", "help wanted", "documentação"],
+                body: [
+                  "## Contexto",
+                  "",
+                  "Uma tradução curta pode ajudar pessoas de outros países a entender, reutilizar e adaptar o projeto.",
+                  "",
+                  "## Resultado esperado",
+                  "",
+                  "- criar `README.en.md` preservando o significado do texto original;",
+                  "- manter o aviso de que achados automáticos não são certificação;",
+                  "- adicionar links entre as versões em português e inglês;",
+                  "- não traduzir nomes oficiais de órgãos públicos.",
+                  "",
+                  "Tradução humana e revisão colaborativa são bem-vindas."
+                ].join("\n")
+              },
+              {
+                title: "test: ampliar a verificação de navegação por teclado",
+                labels: ["good first issue", "help wanted", "acessibilidade"],
+                body: [
+                  "## Contexto",
+                  "",
+                  "A interface já passa pela verificação automatizada local. Queremos documentar um roteiro manual simples de teclado para evitar regressões que ferramentas automáticas não detectam.",
+                  "",
+                  "## Resultado esperado",
+                  "",
+                  "- criar um checklist reproduzível em `docs/`;",
+                  "- cobrir pular para o conteúdo, filtros, cartões, modal e fechamento com Escape;",
+                  "- registrar comportamento esperado de foco;",
+                  "- se desejar, automatizar parte do roteiro sem remover a etapa manual.",
+                  "",
+                  "Relatos com tecnologia assistiva também são valiosos."
+                ].join("\n")
+              },
+              {
+                title: "dados: sugerir e documentar um novo portal de Alagoas",
+                labels: ["good first issue", "help wanted", "dados", "acessibilidade"],
+                body: [
+                  "## Contexto",
+                  "",
+                  "A primeira coleta cobre seis portais públicos. Queremos ampliar a amostra com responsabilidade e transparência.",
+                  "",
+                  "## Como contribuir",
+                  "",
+                  "- indique um portal público ou serviço essencial de Alagoas;",
+                  "- explique brevemente por que ele é relevante para a população;",
+                  "- informe a URL pública e uma tarefa representativa para testar;",
+                  "- não envie dados pessoais, credenciais ou páginas que exijam autenticação.",
+                  "",
+                  "Use também o formulário “Sugerir um portal” do repositório se preferir."
+                ].join("\n")
+              }
+            ];
+
+            const currentIssues = await github.paginate(
+              github.rest.issues.listForRepo,
+              { owner, repo, state: "all", per_page: 100 }
+            );
+            const existingTitles = new Set(
+              currentIssues
+                .filter((item) => !item.pull_request)
+                .map((issue) => issue.title.toLowerCase())
+            );
+
+            for (const task of tasks) {
+              if (!existingTitles.has(task.title.toLowerCase())) {
+                await github.rest.issues.create({ owner, repo, ...task });
+              }
+            }
