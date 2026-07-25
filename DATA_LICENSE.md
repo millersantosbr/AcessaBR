@@ -15,7 +15,7 @@ Você pode compartilhar e adaptar esse conteúdo, inclusive comercialmente, desd
 Forma sugerida de atribuição:
 
 > Dados do AcessaBR, versão da metodologia 0.1.0, coleta de 24 de julho de 2026.
-> https://github.com/millersantosbr/Softcom
+> https://github.com/millersantosbr/AcessaBR
 
 Os nomes, marcas e conteúdos dos portais analisados pertencem aos respectivos
 responsáveis. A licença cobre apenas a base de observações produzida pelo

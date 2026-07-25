@@ -58,7 +58,7 @@ for (const target of targets) {
     locale: "pt-BR",
     reducedMotion: "reduce",
     userAgent:
-      "AcessaBR/0.1 accessibility-research (+https://github.com/millersantosbr/Softcom)",
+      "AcessaBR/0.1 accessibility-research (+https://github.com/millersantosbr/AcessaBR)",
   });
   const page = await context.newPage();
   const startedAt = Date.now();

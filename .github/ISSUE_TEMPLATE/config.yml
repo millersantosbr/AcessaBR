@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Conversas e decisões do projeto
-    url: https://github.com/millersantosbr/Softcom/discussions
+    url: https://github.com/millersantosbr/AcessaBR/discussions
     about: Use as discussões para ideias amplas, dúvidas e decisões comunitárias.
   - name: Relatar vulnerabilidade
-    url: https://github.com/millersantosbr/Softcom/security/advisories/new
+    url: https://github.com/millersantosbr/AcessaBR/security/advisories/new
     about: Não publique detalhes sensíveis em uma issue.

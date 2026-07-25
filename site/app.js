@@ -358,7 +358,7 @@ function openReport(portalId, trigger) {
           </div>`
     }
     <div class="report-actions">
-      <a class="button button-primary" href="https://github.com/millersantosbr/Softcom/issues/new?template=validacao-manual.yml&title=${encodeURIComponent(
+      <a class="button button-primary" href="https://github.com/millersantosbr/AcessaBR/issues/new?template=validacao-manual.yml&title=${encodeURIComponent(
         `[Validação] ${portal.name}`,
       )}" target="_blank" rel="noreferrer">Validar manualmente ↗</a>
       <a class="button button-secondary" href="${escapeHtml(

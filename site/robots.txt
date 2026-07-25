@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://millersantosbr.github.io/Softcom/sitemap.xml
+Sitemap: https://millersantosbr.github.io/AcessaBR/sitemap.xml

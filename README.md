@@ -4,9 +4,9 @@
 
 **Radar aberto e comunitário de barreiras de acessibilidade digital.**
 
-[Abrir o radar](https://millersantosbr.github.io/Softcom/) ·
+[Abrir o radar](https://millersantosbr.github.io/AcessaBR/) ·
 [Ler a metodologia](site/metodologia.html) ·
-[Sugerir um portal](https://github.com/millersantosbr/Softcom/issues/new?template=sugerir-portal.yml) ·
+[Sugerir um portal](https://github.com/millersantosbr/AcessaBR/issues/new?template=sugerir-portal.yml) ·
 [Contribuir](CONTRIBUTING.md)
 
 ## Por que este projeto existe
@@ -96,7 +96,7 @@ Há trabalho útil para diferentes experiências:
 - **mantenedores de portais:** informar correções e ajudar a reproduzir resultados.
 
 Leia o [guia de contribuição](CONTRIBUTING.md) e procure tarefas marcadas como
-[`good first issue`](https://github.com/millersantosbr/Softcom/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
+[`good first issue`](https://github.com/millersantosbr/AcessaBR/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
 
 ## Estrutura
 
