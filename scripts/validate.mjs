@@ -1,15 +1,32 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 
 const files = {
   index: await readFile("site/index.html", "utf8"),
   methodology: await readFile("site/metodologia.html", "utf8"),
   css: await readFile("site/styles.css", "utf8"),
   script: await readFile("site/app.js", "utf8"),
+  manifest: JSON.parse(await readFile("site/site.webmanifest", "utf8")),
   csv: await readFile("site/data/audits.csv", "utf8"),
   data: JSON.parse(await readFile("site/data/audits.json", "utf8")),
 };
 
 const failures = [];
+const iconFiles = [
+  "site/favicon.ico",
+  "site/favicon-16x16.png",
+  "site/favicon-32x32.png",
+  "site/apple-touch-icon.png",
+  "site/favicon-192x192.png",
+  "site/favicon-512x512.png",
+];
+
+for (const iconFile of iconFiles) {
+  try {
+    await access(iconFile);
+  } catch {
+    failures.push(`Arquivo de ícone ausente: ${iconFile}`);
+  }
+}
 
 function requireText(source, pattern, message) {
   if (!pattern.test(source)) failures.push(message);
@@ -24,6 +41,9 @@ for (const [name, html] of [
   requireText(html, /<main\b/, `${name}: região principal ausente`);
   requireText(html, /<h1\b/, `${name}: título H1 ausente`);
   requireText(html, /<title>[^<]+<\/title>/, `${name}: título da página ausente`);
+  requireText(html, /rel="icon"/, `${name}: favicon ausente`);
+  requireText(html, /rel="apple-touch-icon"/, `${name}: ícone Apple ausente`);
+  requireText(html, /rel="manifest"/, `${name}: manifesto ausente`);
 
   const blankLinks = html.match(/<a\b[^>]*target="_blank"[^>]*>/g) ?? [];
   for (const link of blankLinks) {
@@ -71,6 +91,10 @@ for (const portal of files.data.portals ?? []) {
 
 if (!files.data.disclaimer?.includes("não constituem certificação")) {
   failures.push("Aviso metodológico obrigatório ausente da base");
+}
+
+if (files.manifest.short_name !== "AcessaBR" || files.manifest.icons?.length < 2) {
+  failures.push("Manifesto sem identidade ou ícones completos do AcessaBR");
 }
 
 if (failures.length) {
