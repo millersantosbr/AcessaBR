@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T11:46:28.483Z",
+  "generatedAt": "2026-08-10T09:50:18.314Z",
   "methodologyVersion": "0.2.0",
   "schemaVersion": "1.1.0",
   "disclaimer": "Resultados automatizados indicam barreiras potenciais e não constituem certificação ou declaração de conformidade.",
@@ -33,6 +33,16 @@
       "occurrences": 391,
       "critical": 145,
       "serious": 246
+    },
+    {
+      "generatedAt": "2026-08-03T11:46:28.483Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 9,
+      "unavailable": 1,
+      "occurrences": 439,
+      "critical": 145,
+      "serious": 294
     }
   ],
   "portals": [
@@ -46,8 +56,8 @@
       "httpStatus": 200,
       "finalUrl": "https://maceio.al.gov.br/",
       "pageTitle": "Prefeitura de Maceió",
-      "auditedAt": "2026-08-03T11:44:33.752Z",
-      "durationMs": 6294,
+      "auditedAt": "2026-08-10T09:48:25.164Z",
+      "durationMs": 5951,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -260,8 +270,8 @@
       "httpStatus": 200,
       "finalUrl": "https://www.servicos.maceio.al.gov.br/servicos/faces/pages/index.xhtml",
       "pageTitle": "Portal de Serviços",
-      "auditedAt": "2026-08-03T11:44:38.124Z",
-      "durationMs": 4335,
+      "auditedAt": "2026-08-10T09:48:29.422Z",
+      "durationMs": 4213,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -328,8 +338,8 @@
       "httpStatus": 200,
       "finalUrl": "https://alagoasdigital.al.gov.br/",
       "pageTitle": "Portal Alagoas Digital",
-      "auditedAt": "2026-08-03T11:44:44.306Z",
-      "durationMs": 6149,
+      "auditedAt": "2026-08-10T09:48:36.267Z",
+      "durationMs": 6806,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -393,8 +403,8 @@
       "httpStatus": 200,
       "finalUrl": "https://ai.al.gov.br/servicos",
       "pageTitle": "Portal Alagoas",
-      "auditedAt": "2026-08-03T11:44:53.155Z",
-      "durationMs": 8812,
+      "auditedAt": "2026-08-10T09:48:45.176Z",
+      "durationMs": 8871,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -411,8 +421,8 @@
       "location": "Alagoas",
       "url": "https://transparencia.al.gov.br/",
       "status": "unavailable",
-      "auditedAt": "2026-08-03T11:45:38.196Z",
-      "durationMs": 45003,
+      "auditedAt": "2026-08-10T09:49:30.215Z",
+      "durationMs": 45000,
       "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://transparencia.al.gov.br/\", waiting until \"domcontentloaded\"\n",
       "totals": {
         "rules": 0,
@@ -431,8 +441,8 @@
       "httpStatus": 200,
       "finalUrl": "https://www.saude.al.gov.br/",
       "pageTitle": "Saúde Alagoas – Secretaria de Estado da Saúde de Alagoas",
-      "auditedAt": "2026-08-03T11:45:46.867Z",
-      "durationMs": 8639,
+      "auditedAt": "2026-08-10T09:49:38.351Z",
+      "durationMs": 8099,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -556,8 +566,8 @@
       "httpStatus": 200,
       "finalUrl": "https://mais.detran.al.gov.br/auth",
       "pageTitle": "Detran Alagoas",
-      "auditedAt": "2026-08-03T11:45:57.466Z",
-      "durationMs": 10561,
+      "auditedAt": "2026-08-10T09:49:47.650Z",
+      "durationMs": 9258,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -606,8 +616,8 @@
       "httpStatus": 200,
       "finalUrl": "https://escolaweb.educacao.al.gov.br/",
       "pageTitle": "ESCOLA@WEB",
-      "auditedAt": "2026-08-03T11:46:15.308Z",
-      "durationMs": 17808,
+      "auditedAt": "2026-08-10T09:50:05.151Z",
+      "durationMs": 17463,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -741,8 +751,8 @@
       "httpStatus": 200,
       "finalUrl": "https://defensoria.al.def.br/",
       "pageTitle": "DPEAL - Início",
-      "auditedAt": "2026-08-03T11:46:22.358Z",
-      "durationMs": 7007,
+      "auditedAt": "2026-08-10T09:50:12.044Z",
+      "durationMs": 6849,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -837,19 +847,41 @@
       "httpStatus": 200,
       "finalUrl": "https://tjal.jus.br/",
       "pageTitle": "Poder Judiciário de Alagoas",
-      "auditedAt": "2026-08-03T11:46:28.450Z",
-      "durationMs": 6041,
+      "auditedAt": "2026-08-10T09:50:18.281Z",
+      "durationMs": 6168,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
-        "rules": 3,
-        "nodes": 13,
+        "rules": 4,
+        "nodes": 20,
         "byImpact": {
-          "critical": 2,
-          "serious": 11
+          "serious": 18,
+          "critical": 2
         }
       },
       "findings": [
+        {
+          "id": "aria-command-name",
+          "impact": "serious",
+          "title": "ARIA commands must have an accessible name",
+          "description": "Ensure every ARIA button, link and menuitem has an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-command-name?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": ".mdi-chevron-left",
+              "summary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".mdi-chevron-right",
+              "summary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag412"
+          ]
+        },
         {
           "id": "button-name",
           "impact": "critical",
@@ -878,7 +910,7 @@
           "title": "Elements must meet minimum color contrast ratio thresholds",
           "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
-          "nodes": 7,
+          "nodes": 10,
           "examples": [
             {
               "target": ".nav-item.nav-link[href$=\"cgj.tjal.jus.br/\"]",
@@ -904,7 +936,7 @@
           "title": "Links must have discernible text",
           "description": "Ensure links have discernible text",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
-          "nodes": 4,
+          "nodes": 6,
           "examples": [
             {
               "target": ".icon[data-v-a19471e1=\"\"][target=\"_blank\"]:nth-child(1)",
