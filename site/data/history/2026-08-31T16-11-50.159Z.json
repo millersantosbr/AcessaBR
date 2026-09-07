@@ -1,0 +1,1016 @@
+{
+  "generatedAt": "2026-08-31T16:11:50.159Z",
+  "methodologyVersion": "0.2.0",
+  "schemaVersion": "1.1.0",
+  "disclaimer": "Resultados automatizados indicam barreiras potenciais e não constituem certificação ou declaração de conformidade.",
+  "history": [
+    {
+      "generatedAt": "2026-07-25T01:23:22.293Z",
+      "methodologyVersion": "0.1.0",
+      "portals": 6,
+      "audited": 6,
+      "unavailable": 0,
+      "occurrences": 396,
+      "critical": 152,
+      "serious": 244
+    },
+    {
+      "generatedAt": "2026-07-25T02:22:04.210Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 10,
+      "unavailable": 0,
+      "occurrences": 498,
+      "critical": 157,
+      "serious": 341
+    },
+    {
+      "generatedAt": "2026-07-27T11:44:05.458Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 5,
+      "unavailable": 5,
+      "occurrences": 391,
+      "critical": 145,
+      "serious": 246
+    },
+    {
+      "generatedAt": "2026-08-03T11:46:28.483Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 9,
+      "unavailable": 1,
+      "occurrences": 439,
+      "critical": 145,
+      "serious": 294
+    },
+    {
+      "generatedAt": "2026-08-10T09:50:18.314Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 9,
+      "unavailable": 1,
+      "occurrences": 446,
+      "critical": 145,
+      "serious": 301
+    },
+    {
+      "generatedAt": "2026-08-17T09:03:45.089Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 9,
+      "unavailable": 1,
+      "occurrences": 438,
+      "critical": 145,
+      "serious": 293
+    },
+    {
+      "generatedAt": "2026-08-24T09:07:26.837Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 8,
+      "unavailable": 2,
+      "occurrences": 418,
+      "critical": 144,
+      "serious": 274
+    }
+  ],
+  "portals": [
+    {
+      "id": "prefeitura-maceio",
+      "name": "Prefeitura de Maceió",
+      "category": "Governo municipal",
+      "location": "Maceió · AL",
+      "url": "https://maceio.al.gov.br/",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://maceio.al.gov.br/",
+      "pageTitle": "Prefeitura de Maceió",
+      "auditedAt": "2026-08-31T16:10:04.722Z",
+      "durationMs": 5136,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 8,
+        "nodes": 254,
+        "byImpact": {
+          "critical": 144,
+          "serious": 110
+        }
+      },
+      "findings": [
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "title": "Buttons must have discernible text",
+          "description": "Ensure buttons have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/button-name?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": ".header-search > button[type=\"submit\"]",
+              "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            },
+            {
+              "target": ".btn-float-adjust",
+              "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag412"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "title": "Elements must meet minimum color contrast ratio thresholds",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+          "nodes": 29,
+          "examples": [
+            {
+              "target": "li:nth-child(1) > .nav-link[rel=\"noopener\"][target=\"_blank\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.55 (foreground color: #ffffff, background color: #f58428, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "li:nth-child(2) > .nav-link[rel=\"noopener\"][target=\"_blank\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.55 (foreground color: #ffffff, background color: #f58428, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "li:nth-child(3) > .nav-link[rel=\"noopener\"][target=\"_blank\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.55 (foreground color: #ffffff, background color: #f58428, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ]
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "title": "Frames must have an accessible name",
+          "description": "Ensure <iframe> and <frame> elements have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/frame-title?application=playwright",
+          "nodes": 1,
+          "examples": [
+            {
+              "target": "iframe",
+              "summary": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag412"
+          ]
+        },
+        {
+          "id": "image-alt",
+          "impact": "critical",
+          "title": "Images must have alternative text",
+          "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/image-alt?application=playwright",
+          "nodes": 142,
+          "examples": [
+            {
+              "target": "a[rel=\"nofollow\"] > img",
+              "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            },
+            {
+              "target": ".swiper-slide-active.swiper-slide > .info-card[data-name=\"Agendamento\"][target=\"_blank\"] > img",
+              "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            },
+            {
+              "target": ".swiper-slide-next.swiper-slide > .info-card[data-name=\"IPTU 2026\"][target=\"_blank\"] > img",
+              "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag111"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "title": "Links must have discernible text",
+          "description": "Ensure links have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
+          "nodes": 7,
+          "examples": [
+            {
+              "target": "a[rel=\"nofollow\"]",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".--banners.swiper-container-initialized.swiper-container-horizontal > .swiper-wrapper > .swiper-slide-active.swiper-slide > a[target=\"_blank\"]",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".--banners.swiper-container-initialized.swiper-container-horizontal > .swiper-wrapper > .swiper-slide-next.swiper-slide > a[target=\"_blank\"]",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag244",
+            "wcag412"
+          ]
+        },
+        {
+          "id": "list",
+          "impact": "serious",
+          "title": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+          "description": "Ensure that lists are structured correctly",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/list?application=playwright",
+          "nodes": 1,
+          "examples": [
+            {
+              "target": "iframe → ul",
+              "summary": "Fix all of the following:\n  List element has direct children that are not allowed: div"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag131"
+          ]
+        },
+        {
+          "id": "listitem",
+          "impact": "serious",
+          "title": "<li> elements must be contained in a <ul> or <ol>",
+          "description": "Ensure <li> elements are used semantically",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/listitem?application=playwright",
+          "nodes": 3,
+          "examples": [
+            {
+              "target": "iframe → li:nth-child(4)",
+              "summary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+            },
+            {
+              "target": "iframe → li:nth-child(5)",
+              "summary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+            },
+            {
+              "target": "iframe → li:nth-child(6)",
+              "summary": "Fix any of the following:\n  List item does not have a <ul>, <ol> parent element"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag131"
+          ]
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "title": "All touch targets must be 24px large, or leave sufficient space",
+          "description": "Ensure touch targets have sufficient size and space",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
+          "nodes": 69,
+          "examples": [
+            {
+              "target": ".--primary > ul > li:nth-child(1) > a",
+              "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 80px by 21px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17px instead of at least 24px."
+            },
+            {
+              "target": ".--primary > ul > li:nth-child(2) > a",
+              "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 52px by 21px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 21px instead of at least 24px."
+            },
+            {
+              "target": ".--primary > ul > li:nth-child(3) > a",
+              "summary": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 139px by 21px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 17px instead of at least 24px."
+            }
+          ],
+          "tags": [
+            "wcag22aa",
+            "wcag258"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "servicos-maceio",
+      "name": "Portal de Serviços de Maceió",
+      "category": "Serviços ao cidadão",
+      "location": "Maceió · AL",
+      "url": "https://www.servicos.maceio.al.gov.br/",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://www.servicos.maceio.al.gov.br/servicos/faces/pages/index.xhtml",
+      "pageTitle": "Portal de Serviços",
+      "auditedAt": "2026-08-31T16:10:08.623Z",
+      "durationMs": 3857,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 2,
+        "nodes": 13,
+        "byImpact": {
+          "serious": 13
+        }
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "title": "Elements must meet minimum color contrast ratio thresholds",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+          "nodes": 12,
+          "examples": [
+            {
+              "target": "li:nth-child(1) > a[rel=\"noopener\"][target=\"_blank\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.29 (foreground color: #ffffff, background color: #f49505, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "li:nth-child(2) > a[rel=\"noopener\"][target=\"_blank\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.29 (foreground color: #ffffff, background color: #f49505, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "li:nth-child(3) > a[rel=\"noopener\"][target=\"_blank\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.29 (foreground color: #ffffff, background color: #f49505, font size: 10.8pt (14.4px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ]
+        },
+        {
+          "id": "html-has-lang",
+          "impact": "serious",
+          "title": "<html> element must have a lang attribute",
+          "description": "Ensure every HTML document has a lang attribute",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/html-has-lang?application=playwright",
+          "nodes": 1,
+          "examples": [
+            {
+              "target": "html",
+              "summary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag311"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alagoas-digital",
+      "name": "Alagoas Digital",
+      "category": "Serviços digitais",
+      "location": "Alagoas",
+      "url": "https://alagoasdigital.al.gov.br/",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://alagoasdigital.al.gov.br/",
+      "pageTitle": "Portal Alagoas Digital",
+      "auditedAt": "2026-08-31T16:10:14.752Z",
+      "durationMs": 6089,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 3,
+        "nodes": 5,
+        "byImpact": {
+          "serious": 3,
+          "critical": 2
+        }
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "title": "Elements must meet minimum color contrast ratio thresholds",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": "form[action=\"/guia-de-servicos-digital\"] > .ver-servicos-button.btn-primary[type=\"submit\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.78 (foreground color: #ffffff, background color: #02a2f9, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".button-verTodos:nth-child(4) > form[method=\"get\"] > .ver-servicos-button.btn-primary[type=\"submit\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.78 (foreground color: #ffffff, background color: #02a2f9, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ]
+        },
+        {
+          "id": "image-alt",
+          "impact": "critical",
+          "title": "Images must have alternative text",
+          "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/image-alt?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": "#vlibras-access-wrapper → #vlibras-popup",
+              "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            },
+            {
+              "target": "#vlibras-access-wrapper → #vlibras-button > img",
+              "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag111"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "title": "Links must have discernible text",
+          "description": "Ensure links have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
+          "nodes": 1,
+          "examples": [
+            {
+              "target": "a[href=\"\"]",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag244",
+            "wcag412"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "portal-alagoas",
+      "name": "Portal Alagoas",
+      "category": "Governo estadual",
+      "location": "Alagoas",
+      "url": "https://ai.al.gov.br/servicos",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://ai.al.gov.br/servicos",
+      "pageTitle": "Portal Alagoas",
+      "auditedAt": "2026-08-31T16:10:22.201Z",
+      "durationMs": 7410,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 0,
+        "nodes": 0,
+        "byImpact": {}
+      },
+      "findings": []
+    },
+    {
+      "id": "transparencia-al",
+      "name": "Transparência de Alagoas",
+      "category": "Transparência pública",
+      "location": "Alagoas",
+      "url": "https://transparencia.al.gov.br/",
+      "status": "unavailable",
+      "auditedAt": "2026-08-31T16:11:07.243Z",
+      "durationMs": 45002,
+      "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://transparencia.al.gov.br/\", waiting until \"domcontentloaded\"\n",
+      "totals": {
+        "rules": 0,
+        "nodes": 0,
+        "byImpact": {}
+      },
+      "findings": []
+    },
+    {
+      "id": "saude-al",
+      "name": "Secretaria de Saúde de Alagoas",
+      "category": "Saúde",
+      "location": "Alagoas",
+      "url": "https://www.saude.al.gov.br/",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://www.saude.al.gov.br/",
+      "pageTitle": "Saúde Alagoas – Secretaria de Estado da Saúde de Alagoas",
+      "auditedAt": "2026-08-31T16:11:14.525Z",
+      "durationMs": 7248,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 4,
+        "nodes": 85,
+        "byImpact": {
+          "serious": 85
+        }
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "title": "Elements must meet minimum color contrast ratio thresholds",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+          "nodes": 27,
+          "examples": [
+            {
+              "target": ".elementor-element-bffa540 > .elementor-widget-container",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.26 (foreground color: #3176b1, background color: #f1f1f1, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".elementor-element-da69a3c > .elementor-widget-container",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.26 (foreground color: #3176b1, background color: #f1f1f1, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".elementor-element-d3c4c08 > .elementor-widget-container",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.26 (foreground color: #3176b1, background color: #f1f1f1, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "title": "Links must have discernible text",
+          "description": "Ensure links have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
+          "nodes": 50,
+          "examples": [
+            {
+              "target": ".elementor-element-46a40c1 > .elementor-widget-container > a",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".elementor-element-812fcbb > .elementor-widget-container > a",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".elementor-element-6291b6a > .elementor-widget-container > a[target=\"_blank\"]",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag244",
+            "wcag412"
+          ]
+        },
+        {
+          "id": "role-img-alt",
+          "impact": "serious",
+          "title": "[role=\"img\"] elements must have an alternative text",
+          "description": "Ensure [role=\"img\"] elements have alternative text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/role-img-alt?application=playwright",
+          "nodes": 6,
+          "examples": [
+            {
+              "target": ".swiper-slide-duplicate-active[data-swiper-slide-index=\"0\"][aria-label=\"1 / 2\"]:nth-child(1) > .swiper-slide-bg[role=\"img\"]",
+              "summary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".swiper-slide-prev > .swiper-slide-bg[role=\"img\"]",
+              "summary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".swiper-slide-active > .elementor-ken-burns--active.swiper-slide-bg[role=\"img\"]",
+              "summary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag111"
+          ]
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "title": "All touch targets must be 24px large, or leave sufficient space",
+          "description": "Ensure touch targets have sufficient size and space",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": ".elementor-swiper-button-prev",
+              "summary": "Fix any of the following:\n  Target has insufficient size (20px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+            },
+            {
+              "target": ".elementor-swiper-button-next",
+              "summary": "Fix any of the following:\n  Target has insufficient size (20px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+            }
+          ],
+          "tags": [
+            "wcag22aa",
+            "wcag258"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "detran-al",
+      "name": "Detran Alagoas",
+      "category": "Mobilidade e trânsito",
+      "location": "Alagoas",
+      "url": "https://mais.detran.al.gov.br/",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://mais.detran.al.gov.br/auth",
+      "pageTitle": "Detran Alagoas",
+      "auditedAt": "2026-08-31T16:11:22.960Z",
+      "durationMs": 8399,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 1,
+        "nodes": 7,
+        "byImpact": {
+          "serious": 7
+        }
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "title": "Elements must meet minimum color contrast ratio thresholds",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+          "nodes": 7,
+          "examples": [
+            {
+              "target": ".button-gov-br > span",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #ffffff, background color: #007bff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".button-gov-br > span > strong",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #ffffff, background color: #007bff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".warning-text",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 8.4pt (11.2px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "educacao-al",
+      "name": "Secretaria de Educação de Alagoas",
+      "category": "Educação",
+      "location": "Alagoas",
+      "url": "https://escolaweb.educacao.al.gov.br/",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://escolaweb.educacao.al.gov.br/",
+      "pageTitle": "ESCOLA@WEB",
+      "auditedAt": "2026-08-31T16:11:37.488Z",
+      "durationMs": 14494,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 5,
+        "nodes": 39,
+        "byImpact": {
+          "serious": 39
+        }
+      },
+      "findings": [
+        {
+          "id": "aria-hidden-focus",
+          "impact": "serious",
+          "title": "ARIA hidden element must not be focusable or contain focusable elements",
+          "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-hidden-focus?application=playwright",
+          "nodes": 1,
+          "examples": [
+            {
+              "target": ".home-modules-containers",
+              "summary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag412"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "title": "Elements must meet minimum color contrast ratio thresholds",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+          "nodes": 30,
+          "examples": [
+            {
+              "target": ".button-flat-white",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.37 (foreground color: #8e8b8b, background color: #ffffff, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".actions > .button-flat.btn-flat.waves-light",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.38 (foreground color: #ffffff, background color: #f4da7f, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": "#react-tabs-6 > .cor-text-1[for=\"\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.47 (foreground color: #616161, background color: #f4da7f, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ]
+        },
+        {
+          "id": "html-has-lang",
+          "impact": "serious",
+          "title": "<html> element must have a lang attribute",
+          "description": "Ensure every HTML document has a lang attribute",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/html-has-lang?application=playwright",
+          "nodes": 1,
+          "examples": [
+            {
+              "target": "html",
+              "summary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag311"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "title": "Links must have discernible text",
+          "description": "Ensure links have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
+          "nodes": 5,
+          "examples": [
+            {
+              "target": ".center > div:nth-child(2) > a[target=\"_blank\"]:nth-child(1)",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": "a[target=\"_blank\"]:nth-child(2)",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": "a[target=\"_blank\"]:nth-child(3)",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag244",
+            "wcag412"
+          ]
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "title": "All touch targets must be 24px large, or leave sufficient space",
+          "description": "Ensure touch targets have sufficient size and space",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": "a[title=\"Sobre - Gestores\"]",
+              "summary": "Fix any of the following:\n  Target has insufficient size (61px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
+            },
+            {
+              "target": "a[title=\"Sobre - Alunos\"]",
+              "summary": "Fix any of the following:\n  Target has insufficient size (46px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.4px instead of at least 24px."
+            }
+          ],
+          "tags": [
+            "wcag22aa",
+            "wcag258"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "defensoria-al",
+      "name": "Defensoria Pública de Alagoas",
+      "category": "Acesso à Justiça",
+      "location": "Alagoas",
+      "url": "https://defensoria.al.def.br/",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://defensoria.al.def.br/",
+      "pageTitle": "DPEAL - Início",
+      "auditedAt": "2026-08-31T16:11:44.247Z",
+      "durationMs": 6715,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 3,
+        "nodes": 27,
+        "byImpact": {
+          "serious": 26,
+          "critical": 1
+        }
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "title": "Elements must meet minimum color contrast ratio thresholds",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+          "nodes": 10,
+          "examples": [
+            {
+              "target": ".carousel-item.active > .featured-card.card > .destaque.card-body > .data-e-hora",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #78858f, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".verde:nth-child(4)",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.43 (foreground color: #ffffff, background color: #78b654, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".verde:nth-child(5)",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.43 (foreground color: #ffffff, background color: #78b654, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ]
+        },
+        {
+          "id": "image-alt",
+          "impact": "critical",
+          "title": "Images must have alternative text",
+          "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/image-alt?application=playwright",
+          "nodes": 1,
+          "examples": [
+            {
+              "target": ".logo-footer > img[src$=\"logo-dpe.png\"]",
+              "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag111"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "title": "Links must have discernible text",
+          "description": "Ensure links have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
+          "nodes": 16,
+          "examples": [
+            {
+              "target": ".defensor",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".documentos-necessarios",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".disque-129",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag244",
+            "wcag412"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tjal",
+      "name": "Tribunal de Justiça de Alagoas",
+      "category": "Justiça",
+      "location": "Alagoas",
+      "url": "https://tjal.jus.br/",
+      "status": "audited",
+      "httpStatus": 200,
+      "finalUrl": "https://tjal.jus.br/",
+      "pageTitle": "Poder Judiciário de Alagoas",
+      "auditedAt": "2026-08-31T16:11:50.108Z",
+      "durationMs": 5794,
+      "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
+      "engine": "axe-core 4.10.2",
+      "totals": {
+        "rules": 4,
+        "nodes": 20,
+        "byImpact": {
+          "serious": 18,
+          "critical": 2
+        }
+      },
+      "findings": [
+        {
+          "id": "aria-command-name",
+          "impact": "serious",
+          "title": "ARIA commands must have an accessible name",
+          "description": "Ensure every ARIA button, link and menuitem has an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-command-name?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": ".mdi-chevron-left",
+              "summary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".mdi-chevron-right",
+              "summary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag412"
+          ]
+        },
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "title": "Buttons must have discernible text",
+          "description": "Ensure buttons have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/button-name?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": ".search-container > .btn",
+              "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            },
+            {
+              "target": ".accordion-button",
+              "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag412"
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "title": "Elements must meet minimum color contrast ratio thresholds",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+          "nodes": 10,
+          "examples": [
+            {
+              "target": ".nav-item.nav-link[href$=\"cgj.tjal.jus.br/\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.58 (foreground color: #ffffff, background color: #82a5c2, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".nav-item.nav-link[href$=\"esmal.tjal.jus.br/\"]",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.58 (foreground color: #ffffff, background color: #82a5c2, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": ".nav-item.nav-link[data-v-a19471e1=\"\"]:nth-child(3)",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.58 (foreground color: #ffffff, background color: #82a5c2, font size: 9.6pt (12.8px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "tags": [
+            "wcag2aa",
+            "wcag143"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "title": "Links must have discernible text",
+          "description": "Ensure links have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
+          "nodes": 6,
+          "examples": [
+            {
+              "target": ".icon[data-v-a19471e1=\"\"][target=\"_blank\"]:nth-child(1)",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": "a[href$=\"TJALagoas\"]",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".icon[data-v-a19471e1=\"\"][target=\"_blank\"]:nth-child(3)",
+              "summary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag244",
+            "wcag412"
+          ]
+        }
+      ]
+    }
+  ]
+}
