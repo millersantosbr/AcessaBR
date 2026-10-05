@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T16:48:12.818Z",
+  "generatedAt": "2026-10-05T17:11:39.652Z",
   "methodologyVersion": "0.2.0",
   "schemaVersion": "1.1.0",
   "disclaimer": "Resultados automatizados indicam barreiras potenciais e não constituem certificação ou declaração de conformidade.",
@@ -113,6 +113,16 @@
       "occurrences": 484,
       "critical": 154,
       "serious": 330
+    },
+    {
+      "generatedAt": "2026-09-28T16:48:12.818Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 8,
+      "unavailable": 2,
+      "occurrences": 442,
+      "critical": 145,
+      "serious": 297
     }
   ],
   "portals": [
@@ -126,16 +136,16 @@
       "httpStatus": 200,
       "finalUrl": "https://maceio.al.gov.br/",
       "pageTitle": "Prefeitura de Maceió",
-      "auditedAt": "2026-09-28T16:45:48.138Z",
-      "durationMs": 5605,
+      "auditedAt": "2026-10-05T17:09:27.695Z",
+      "durationMs": 5602,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
         "rules": 8,
-        "nodes": 251,
+        "nodes": 252,
         "byImpact": {
           "critical": 142,
-          "serious": 109
+          "serious": 110
         }
       },
       "findings": [
@@ -167,7 +177,7 @@
           "title": "Elements must meet minimum color contrast ratio thresholds",
           "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
-          "nodes": 28,
+          "nodes": 29,
           "examples": [
             {
               "target": "li:nth-child(1) > .nav-link[rel=\"noopener\"][target=\"_blank\"]",
@@ -340,8 +350,8 @@
       "httpStatus": 200,
       "finalUrl": "https://www.servicos.maceio.al.gov.br/servicos/faces/pages/index.xhtml",
       "pageTitle": "Portal de Serviços",
-      "auditedAt": "2026-09-28T16:45:52.023Z",
-      "durationMs": 3842,
+      "auditedAt": "2026-10-05T17:09:31.895Z",
+      "durationMs": 4152,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -405,9 +415,9 @@
       "location": "Alagoas",
       "url": "https://alagoasdigital.al.gov.br/",
       "status": "unavailable",
-      "auditedAt": "2026-09-28T16:46:37.061Z",
-      "durationMs": 45001,
-      "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://alagoasdigital.al.gov.br/\", waiting until \"domcontentloaded\"\n",
+      "auditedAt": "2026-10-05T17:09:53.409Z",
+      "durationMs": 21478,
+      "error": "page.goto: net::ERR_CONNECTION_RESET at https://alagoasdigital.al.gov.br/\nCall log:\n  - navigating to \"https://alagoasdigital.al.gov.br/\", waiting until \"domcontentloaded\"\n",
       "totals": {
         "rules": 0,
         "nodes": 0,
@@ -425,8 +435,8 @@
       "httpStatus": 200,
       "finalUrl": "https://ai.al.gov.br/servicos",
       "pageTitle": "Portal Alagoas",
-      "auditedAt": "2026-09-28T16:46:44.941Z",
-      "durationMs": 7845,
+      "auditedAt": "2026-10-05T17:10:03.867Z",
+      "durationMs": 10421,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -443,8 +453,8 @@
       "location": "Alagoas",
       "url": "https://transparencia.al.gov.br/",
       "status": "unavailable",
-      "auditedAt": "2026-09-28T16:47:29.982Z",
-      "durationMs": 45001,
+      "auditedAt": "2026-10-05T17:10:48.904Z",
+      "durationMs": 45000,
       "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://transparencia.al.gov.br/\", waiting until \"domcontentloaded\"\n",
       "totals": {
         "rules": 0,
@@ -463,8 +473,8 @@
       "httpStatus": 200,
       "finalUrl": "https://www.saude.al.gov.br/",
       "pageTitle": "Saúde Alagoas – Secretaria de Estado da Saúde de Alagoas",
-      "auditedAt": "2026-09-28T16:47:37.189Z",
-      "durationMs": 7172,
+      "auditedAt": "2026-10-05T17:10:57.208Z",
+      "durationMs": 8272,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -588,8 +598,8 @@
       "httpStatus": 200,
       "finalUrl": "https://mais.detran.al.gov.br/auth",
       "pageTitle": "Detran Alagoas",
-      "auditedAt": "2026-09-28T16:47:45.431Z",
-      "durationMs": 8200,
+      "auditedAt": "2026-10-05T17:11:06.804Z",
+      "durationMs": 9556,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -638,15 +648,15 @@
       "httpStatus": 200,
       "finalUrl": "https://escolaweb.educacao.al.gov.br/",
       "pageTitle": "ESCOLA@WEB",
-      "auditedAt": "2026-09-28T16:48:00.421Z",
-      "durationMs": 14954,
+      "auditedAt": "2026-10-05T17:11:24.462Z",
+      "durationMs": 17623,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
         "rules": 5,
-        "nodes": 39,
+        "nodes": 37,
         "byImpact": {
-          "serious": 39
+          "serious": 37
         }
       },
       "findings": [
@@ -674,7 +684,7 @@
           "title": "Elements must meet minimum color contrast ratio thresholds",
           "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
-          "nodes": 30,
+          "nodes": 28,
           "examples": [
             {
               "target": ".button-flat-white",
@@ -773,8 +783,8 @@
       "httpStatus": 200,
       "finalUrl": "https://defensoria.al.def.br/",
       "pageTitle": "DPEAL - Início",
-      "auditedAt": "2026-09-28T16:48:06.874Z",
-      "durationMs": 6409,
+      "auditedAt": "2026-10-05T17:11:33.433Z",
+      "durationMs": 8929,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -869,41 +879,19 @@
       "httpStatus": 200,
       "finalUrl": "https://tjal.jus.br/",
       "pageTitle": "Poder Judiciário de Alagoas",
-      "auditedAt": "2026-09-28T16:48:12.777Z",
-      "durationMs": 5825,
+      "auditedAt": "2026-10-05T17:11:39.617Z",
+      "durationMs": 6117,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
-        "rules": 4,
-        "nodes": 20,
+        "rules": 3,
+        "nodes": 13,
         "byImpact": {
-          "serious": 18,
-          "critical": 2
+          "critical": 2,
+          "serious": 11
         }
       },
       "findings": [
-        {
-          "id": "aria-command-name",
-          "impact": "serious",
-          "title": "ARIA commands must have an accessible name",
-          "description": "Ensure every ARIA button, link and menuitem has an accessible name",
-          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-command-name?application=playwright",
-          "nodes": 2,
-          "examples": [
-            {
-              "target": ".mdi-chevron-left",
-              "summary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-            },
-            {
-              "target": ".mdi-chevron-right",
-              "summary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
-            }
-          ],
-          "tags": [
-            "wcag2a",
-            "wcag412"
-          ]
-        },
         {
           "id": "button-name",
           "impact": "critical",
@@ -932,7 +920,7 @@
           "title": "Elements must meet minimum color contrast ratio thresholds",
           "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
-          "nodes": 10,
+          "nodes": 7,
           "examples": [
             {
               "target": ".nav-item.nav-link[href$=\"cgj.tjal.jus.br/\"]",
@@ -958,7 +946,7 @@
           "title": "Links must have discernible text",
           "description": "Ensure links have discernible text",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
-          "nodes": 6,
+          "nodes": 4,
           "examples": [
             {
               "target": ".icon[data-v-a19471e1=\"\"][target=\"_blank\"]:nth-child(1)",
