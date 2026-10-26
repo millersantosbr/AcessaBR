@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T15:38:27.505Z",
+  "generatedAt": "2026-10-26T15:24:36.923Z",
   "methodologyVersion": "0.2.0",
   "schemaVersion": "1.1.0",
   "disclaimer": "Resultados automatizados indicam barreiras potenciais e não constituem certificação ou declaração de conformidade.",
@@ -143,6 +143,16 @@
       "occurrences": 442,
       "critical": 145,
       "serious": 297
+    },
+    {
+      "generatedAt": "2026-10-19T15:38:27.505Z",
+      "methodologyVersion": "0.2.0",
+      "portals": 10,
+      "audited": 8,
+      "unavailable": 2,
+      "occurrences": 445,
+      "critical": 145,
+      "serious": 300
     }
   ],
   "portals": [
@@ -156,16 +166,16 @@
       "httpStatus": 200,
       "finalUrl": "https://maceio.al.gov.br/",
       "pageTitle": "Prefeitura de Maceió",
-      "auditedAt": "2026-10-19T15:36:17.795Z",
-      "durationMs": 6126,
+      "auditedAt": "2026-10-26T15:22:29.424Z",
+      "durationMs": 5108,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
         "rules": 8,
-        "nodes": 251,
+        "nodes": 252,
         "byImpact": {
           "critical": 142,
-          "serious": 109
+          "serious": 110
         }
       },
       "findings": [
@@ -197,7 +207,7 @@
           "title": "Elements must meet minimum color contrast ratio thresholds",
           "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
-          "nodes": 28,
+          "nodes": 29,
           "examples": [
             {
               "target": "li:nth-child(1) > .nav-link[rel=\"noopener\"][target=\"_blank\"]",
@@ -370,8 +380,8 @@
       "httpStatus": 200,
       "finalUrl": "https://www.servicos.maceio.al.gov.br/servicos/faces/pages/index.xhtml",
       "pageTitle": "Portal de Serviços",
-      "auditedAt": "2026-10-19T15:36:22.171Z",
-      "durationMs": 4328,
+      "auditedAt": "2026-10-26T15:22:32.782Z",
+      "durationMs": 3321,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -435,8 +445,8 @@
       "location": "Alagoas",
       "url": "https://alagoasdigital.al.gov.br/",
       "status": "unavailable",
-      "auditedAt": "2026-10-19T15:36:44.147Z",
-      "durationMs": 21938,
+      "auditedAt": "2026-10-26T15:22:54.255Z",
+      "durationMs": 21444,
       "error": "page.goto: net::ERR_CONNECTION_RESET at https://alagoasdigital.al.gov.br/\nCall log:\n  - navigating to \"https://alagoasdigital.al.gov.br/\", waiting until \"domcontentloaded\"\n",
       "totals": {
         "rules": 0,
@@ -455,8 +465,8 @@
       "httpStatus": 200,
       "finalUrl": "https://ai.al.gov.br/servicos",
       "pageTitle": "Portal Alagoas",
-      "auditedAt": "2026-10-19T15:36:52.463Z",
-      "durationMs": 8269,
+      "auditedAt": "2026-10-26T15:23:05.631Z",
+      "durationMs": 11342,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -473,7 +483,7 @@
       "location": "Alagoas",
       "url": "https://transparencia.al.gov.br/",
       "status": "unavailable",
-      "auditedAt": "2026-10-19T15:37:37.502Z",
+      "auditedAt": "2026-10-26T15:23:50.663Z",
       "durationMs": 45001,
       "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://transparencia.al.gov.br/\", waiting until \"domcontentloaded\"\n",
       "totals": {
@@ -493,15 +503,15 @@
       "httpStatus": 200,
       "finalUrl": "https://www.saude.al.gov.br/",
       "pageTitle": "Saúde Alagoas – Secretaria de Estado da Saúde de Alagoas",
-      "auditedAt": "2026-10-19T15:37:46.090Z",
-      "durationMs": 8551,
+      "auditedAt": "2026-10-26T15:23:58.401Z",
+      "durationMs": 7707,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
         "rules": 4,
-        "nodes": 96,
+        "nodes": 94,
         "byImpact": {
-          "serious": 96
+          "serious": 94
         }
       },
       "findings": [
@@ -514,15 +524,15 @@
           "nodes": 33,
           "examples": [
             {
-              "target": ".post-124757 > .elementor-post__text > .elementor-post__meta-data > .elementor-post-date",
+              "target": ".post-124953 > .elementor-post__text > .elementor-post__meta-data > .elementor-post-date",
               "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #7a7a7a, background color: #f1f1f1, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
             },
             {
-              "target": ".post-124757 > .elementor-post__text > .elementor-post__excerpt > p",
+              "target": ".post-124953 > .elementor-post__text > .elementor-post__excerpt > p",
               "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #777777, background color: #f1f1f1, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
             },
             {
-              "target": ".post-124754 > .elementor-post__text > .elementor-post__meta-data > .elementor-post-date",
+              "target": ".post-124950 > .elementor-post__text > .elementor-post__meta-data > .elementor-post-date",
               "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #7a7a7a, background color: #f1f1f1, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
             }
           ],
@@ -590,18 +600,14 @@
           "title": "All touch targets must be 24px large, or leave sufficient space",
           "description": "Ensure touch targets have sufficient size and space",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
-          "nodes": 4,
+          "nodes": 2,
           "examples": [
             {
-              "target": ".slick-current > .jet-smart-tiles-slide__wrap.layout-2-x.rows-1 > .jet-smart-tiles:nth-child(1) > .jet-smart-tiles__box > .jet-smart-tiles__terms > .jet-smart-tiles__terms-link.jet-smart-tiles__terms-link--14",
-              "summary": "Fix any of the following:\n  Target has insufficient size (70px by 23px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
-            },
-            {
-              "target": ".slick-current > .jet-smart-tiles-slide__wrap.layout-2-x.rows-1 > .jet-smart-tiles:nth-child(2) > .jet-smart-tiles__box > .jet-smart-tiles__terms > .jet-smart-tiles__terms-link.jet-smart-tiles__terms-link--14",
-              "summary": "Fix any of the following:\n  Target has insufficient size (70px by 23px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23px instead of at least 24px."
-            },
-            {
               "target": ".elementor-swiper-button-prev",
+              "summary": "Fix any of the following:\n  Target has insufficient size (20px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+            },
+            {
+              "target": ".elementor-swiper-button-next",
               "summary": "Fix any of the following:\n  Target has insufficient size (20px by 20px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
             }
           ],
@@ -622,8 +628,8 @@
       "httpStatus": 200,
       "finalUrl": "https://mais.detran.al.gov.br/auth",
       "pageTitle": "Detran Alagoas",
-      "auditedAt": "2026-10-19T15:37:55.636Z",
-      "durationMs": 9507,
+      "auditedAt": "2026-10-26T15:24:07.882Z",
+      "durationMs": 9451,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -672,15 +678,15 @@
       "httpStatus": 200,
       "finalUrl": "https://escolaweb.educacao.al.gov.br/",
       "pageTitle": "ESCOLA@WEB",
-      "auditedAt": "2026-10-19T15:38:14.053Z",
-      "durationMs": 18379,
+      "auditedAt": "2026-10-26T15:24:23.719Z",
+      "durationMs": 15811,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
         "rules": 5,
-        "nodes": 38,
+        "nodes": 39,
         "byImpact": {
-          "serious": 38
+          "serious": 39
         }
       },
       "findings": [
@@ -708,7 +714,7 @@
           "title": "Elements must meet minimum color contrast ratio thresholds",
           "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
-          "nodes": 29,
+          "nodes": 30,
           "examples": [
             {
               "target": ".button-flat-white",
@@ -719,7 +725,7 @@
               "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.38 (foreground color: #ffffff, background color: #f4da7f, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
             },
             {
-              "target": "#react-tabs-10 > .cor-text-1[for=\"\"]",
+              "target": "#react-tabs-6 > .cor-text-1[for=\"\"]",
               "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.47 (foreground color: #616161, background color: #f4da7f, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
             }
           ],
@@ -807,8 +813,8 @@
       "httpStatus": 200,
       "finalUrl": "https://defensoria.al.def.br/",
       "pageTitle": "DPEAL - Início",
-      "auditedAt": "2026-10-19T15:38:21.412Z",
-      "durationMs": 7314,
+      "auditedAt": "2026-10-26T15:24:30.490Z",
+      "durationMs": 6736,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
@@ -903,19 +909,41 @@
       "httpStatus": 200,
       "finalUrl": "https://tjal.jus.br/",
       "pageTitle": "Poder Judiciário de Alagoas",
-      "auditedAt": "2026-10-19T15:38:27.470Z",
-      "durationMs": 5990,
+      "auditedAt": "2026-10-26T15:24:36.898Z",
+      "durationMs": 6361,
       "standard": "WCAG 2.2 A/AA — verificação automatizada parcial",
       "engine": "axe-core 4.10.2",
       "totals": {
-        "rules": 3,
-        "nodes": 13,
+        "rules": 4,
+        "nodes": 20,
         "byImpact": {
-          "critical": 2,
-          "serious": 11
+          "serious": 18,
+          "critical": 2
         }
       },
       "findings": [
+        {
+          "id": "aria-command-name",
+          "impact": "serious",
+          "title": "ARIA commands must have an accessible name",
+          "description": "Ensure every ARIA button, link and menuitem has an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-command-name?application=playwright",
+          "nodes": 2,
+          "examples": [
+            {
+              "target": ".mdi-chevron-left",
+              "summary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            },
+            {
+              "target": ".mdi-chevron-right",
+              "summary": "Fix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ],
+          "tags": [
+            "wcag2a",
+            "wcag412"
+          ]
+        },
         {
           "id": "button-name",
           "impact": "critical",
@@ -944,7 +972,7 @@
           "title": "Elements must meet minimum color contrast ratio thresholds",
           "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
-          "nodes": 7,
+          "nodes": 10,
           "examples": [
             {
               "target": ".nav-item.nav-link[href$=\"cgj.tjal.jus.br/\"]",
@@ -970,7 +998,7 @@
           "title": "Links must have discernible text",
           "description": "Ensure links have discernible text",
           "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
-          "nodes": 4,
+          "nodes": 6,
           "examples": [
             {
               "target": ".icon[data-v-839e3b6b=\"\"][target=\"_blank\"]:nth-child(1)",
